@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="text-xl">
     <header>
-        <h1>
+        <h1 class="text-3xl">
             Welcome to NutUI React Mini Server
         </h1>
     </header>
@@ -18,9 +19,9 @@
             method="POST"
             enctype="multipart/form-data"
         >
-            <label for="file">上传文件：</label>
+            <label for="file" class="text-gray-400">上传文件：</label>
             <input type="file" name="file" id="file" /><br />
-            <input type="submit" value="提交" />
+            <input type="submit" value="提交" class="mt-4 w-20 h-10 cursor-pointer rounded-xl border border-orange-300" />
         </form>
         <div id="filePathResult" style="margin-top: 16px; color: green;"></div>
     </main>
