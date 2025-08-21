@@ -14,6 +14,9 @@
     "git-init": "git submodule update --remote",
     "fork:install": "cd nutui-react-fork && pnpm install",
     "server:install": "cd nutui-react-mini-server && bun install",
-    "server:runner": "cd nutui-react-mini-server && bun run start "
+    "server:runner": "cd nutui-react-mini-server && bun run start ",
+    "docs:dev": "vitepress dev nutui-react-docs",
+    "docs:build": "vitepress build nutui-react-docs",
+    "docs:preview": "vitepress preview nutui-react-docs"
   }
 }
