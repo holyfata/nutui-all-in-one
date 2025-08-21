@@ -12,6 +12,8 @@
   "scripts": {
     "postinstall": "bun run git-init && bun run fork:install",
     "git-init": "git submodule update --remote",
-    "fork:install": "cd nutui-react-fork && pnpm install"
+    "fork:install": "cd nutui-react-fork && pnpm install",
+    "server:install": "cd nutui-react-mini-server && bun install",
+    "server:runner": "cd nutui-react-mini-server && bun run start "
   }
 }

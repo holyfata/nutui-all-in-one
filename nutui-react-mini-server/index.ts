@@ -13,10 +13,10 @@ app.use(cors({
 }));
 
 // 配置 multer 中间件，上传文件保存到 ./files/ 目录
-app.use(multer({ dest: './files/' }).any());
+app.use(multer({ dest: path.join(__dirname, './files') }).any());
 
 // 提供静态文件服务，访问 files 目录下的文件
-app.use(express.static('files'));
+app.use(express.static(path.join(__dirname, './files')));
 
 // 根路由，返回 index.html 文件
 app.get("/", (_req: Request, res: Response) => {
