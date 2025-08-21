@@ -1,0 +1,6 @@
+[submodule "nutui-react-jdf2e"]
+	path = nutui-react-jdf2e
+	url = https://github.com/jdf2e/nutui-react.git
+[submodule "nutui-react-fork"]
+	path = nutui-react-fork
+	url = git@github.com:holyfata/nutui-react.git
