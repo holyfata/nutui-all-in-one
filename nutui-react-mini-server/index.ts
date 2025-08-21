@@ -7,7 +7,10 @@ import express, { type Request, type Response } from "express";
 const app = express();
 
 // 启用跨域资源共享
-app.use(cors());
+app.use(cors({
+    origin: true,
+    credentials: true
+}));
 
 // 配置 multer 中间件，上传文件保存到 ./files/ 目录
 app.use(multer({ dest: './files/' }).any());
