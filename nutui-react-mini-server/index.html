@@ -13,6 +13,7 @@
     </header>
     <main>
         <form
+            id="uploadForm"
             action="http://127.0.0.1:3000/upload"
             method="POST"
             enctype="multipart/form-data"
@@ -21,6 +22,21 @@
             <input type="file" name="file" id="file" /><br />
             <input type="submit" value="提交" />
         </form>
+        <div id="filePathResult" style="margin-top: 16px; color: green;"></div>
     </main>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+            document.getElementById('filePathResult').textContent = result.filePath
+                ? `文件路径：${result.filePath}`
+                : '上传失败';
+        });
+    </script>
 </body>
 </html>
