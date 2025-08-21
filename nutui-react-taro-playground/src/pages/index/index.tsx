@@ -1,5 +1,6 @@
-import { View, Text } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import { useLoad } from '@tarojs/taro'
+import { NoticeBar } from '@nutui/nutui-react-taro'
 import './index.scss'
 
 export default function Index () {
@@ -7,9 +8,11 @@ export default function Index () {
     console.log('Page loaded.')
   })
 
+  const text = 'Welcome to NutUI React Taro Playground.'
+
   return (
     <View className='index'>
-      <Text>Hello world!</Text>
+      <NoticeBar content={text} />
     </View>
   )
 }

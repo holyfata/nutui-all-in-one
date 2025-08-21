@@ -1,4 +1,4 @@
-import { View, Text } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import { useLoad } from '@tarojs/taro'
 import { NoticeBar } from '@nutui/nutui-react'
 import './index.scss'
