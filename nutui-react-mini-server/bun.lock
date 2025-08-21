@@ -1,0 +1,34 @@
+{
+  "lockfileVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "nutui-react-mini-server",
+      "dependencies": {
+        "hono": "^4.8.9",
+      },
+      "devDependencies": {
+        "@types/bun": "latest",
+      },
+      "peerDependencies": {
+        "typescript": "^5",
+      },
+    },
+  },
+  "packages": {
+    "@types/bun": ["@types/bun@1.2.19", "http://registry.m.jd.com/@types/bun/download/@types/bun-1.2.19.tgz", { "dependencies": { "bun-types": "1.2.19" } }, "sha1-P7N6WeVtXdInZlPbW2oCKYm25GU="],
+
+    "@types/node": ["@types/node@24.3.0", "http://registry.m.jd.com/@types/node/download/@types/node-24.3.0.tgz", { "dependencies": { "undici-types": "~7.10.0" } }, "sha1-ibCfRcuajuaUZvGO5YZOTD64Tew="],
+
+    "@types/react": ["@types/react@19.1.10", "http://registry.m.jd.com/@types/react/download/@types/react-19.1.10.tgz", { "dependencies": { "csstype": "^3.0.2" } }, "sha1-oFAVlS7zKOG4VXnIOacTBLB9Idk="],
+
+    "bun-types": ["bun-types@1.2.19", "http://registry.m.jd.com/bun-types/download/bun-types-1.2.19.tgz", { "dependencies": { "@types/node": "*" }, "peerDependencies": { "@types/react": "^19" } }, "sha1-DOzXjtCLrjicyQKuOlYXw5Cw+rY="],
+
+    "csstype": ["csstype@3.1.3", "http://registry.m.jd.com/csstype/download/csstype-3.1.3.tgz", {}, "sha1-2A/ylNEU+w5qxQD7+FtgE31+/4E="],
+
+    "hono": ["hono@4.8.9", "http://registry.m.jd.com/hono/download/hono-4.8.9.tgz", {}, "sha1-cGJvo40K1paY41c9H4Tbl9rna3I="],
+
+    "typescript": ["typescript@5.9.2", "http://registry.m.jd.com/typescript/download/typescript-5.9.2.tgz", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha1-2TRQzd7FFUotXKvjuBArgzFvsqY="],
+
+    "undici-types": ["undici-types@7.10.0", "http://registry.m.jd.com/undici-types/download/undici-types-7.10.0.tgz", {}, "sha1-SsLgWM5WtGKwVuYpzGoCOT0/81A="],
+  }
+}
