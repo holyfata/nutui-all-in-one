@@ -14,6 +14,7 @@
     "git-init": "git submodule update --remote",
     "docs:dev": "vitepress dev nutui-react-docs",
     "docs:build": "vitepress build nutui-react-docs",
-    "docs:preview": "vitepress preview nutui-react-docs"
+    "docs:preview": "vitepress preview nutui-react-docs",
+    "build:react": "zsh ./build_react.sh"
   }
 }
