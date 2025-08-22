@@ -1,0 +1,21 @@
+# 文本文件统一使用LF换行符
+* text=auto eol=lf
+
+# 明确指定文本文件类型
+*.txt text
+*.md text
+*.html text
+*.css text
+*.js text
+*.py text
+*.java text
+*.c text
+*.h text
+
+# 二进制文件不进行转换
+*.png binary
+*.jpg binary
+*.gif binary
+*.zip binary
+*.exe binary
+*.dll binary
