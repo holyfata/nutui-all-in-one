@@ -3,17 +3,20 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
   "scripts": {
     "postinstall": "npm run submodule",
     "submodule": "git submodule update --remote",
     "docs:dev": "vitepress dev nutui-react-docs",
     "docs:build": "vitepress build nutui-react-docs",
     "docs:preview": "vitepress preview nutui-react-docs"
+  },
+  "dependencies": {
+    "vitepress": "^1.6.4"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
   }
 }

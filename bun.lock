@@ -3,6 +3,9 @@
   "workspaces": {
     "": {
       "name": "nutui-all-in-one",
+      "dependencies": {
+        "vitepress": "^1.6.4",
+      },
       "devDependencies": {
         "@types/bun": "latest",
       },
@@ -12,18 +15,806 @@
     },
   },
   "packages": {
+    "@adobe/css-tools": ["@adobe/css-tools@4.3.3", "http://registry.m.jd.com/@adobe/css-tools/download/@adobe/css-tools-4.3.3.tgz", {}, "sha1-kHSb3ouJzUF2QiT1qsKc1BOPdf8="],
+
+    "@algolia/abtesting": ["@algolia/abtesting@1.1.0", "http://registry.m.jd.com/@algolia/abtesting/download/@algolia/abtesting-1.1.0.tgz", { "dependencies": { "@algolia/client-common": "5.35.0", "@algolia/requester-browser-xhr": "5.35.0", "@algolia/requester-fetch": "5.35.0", "@algolia/requester-node-http": "5.35.0" } }, "sha1-MshIdpVnJ9zcqN8DxWfxL7Oe3w0="],
+
+    "@algolia/autocomplete-core": ["@algolia/autocomplete-core@1.17.7", "http://registry.m.jd.com/@algolia/autocomplete-core/download/@algolia/autocomplete-core-1.17.7.tgz", { "dependencies": { "@algolia/autocomplete-plugin-algolia-insights": "1.17.7", "@algolia/autocomplete-shared": "1.17.7" } }, "sha1-LEELqpSkfFxfVu1xK7SgDr4kCIs="],
+
+    "@algolia/autocomplete-plugin-algolia-insights": ["@algolia/autocomplete-plugin-algolia-insights@1.17.7", "http://registry.m.jd.com/@algolia/autocomplete-plugin-algolia-insights/download/@algolia/autocomplete-plugin-algolia-insights-1.17.7.tgz", { "dependencies": { "@algolia/autocomplete-shared": "1.17.7" }, "peerDependencies": { "search-insights": ">= 1 < 3" } }, "sha1-fSsQX4Tn3Y8DcKpMSrO3BOZ2DYI="],
+
+    "@algolia/autocomplete-preset-algolia": ["@algolia/autocomplete-preset-algolia@1.17.7", "http://registry.m.jd.com/@algolia/autocomplete-preset-algolia/download/@algolia/autocomplete-preset-algolia-1.17.7.tgz", { "dependencies": { "@algolia/autocomplete-shared": "1.17.7" }, "peerDependencies": { "@algolia/client-search": ">= 4.9.1 < 6", "algoliasearch": ">= 4.9.1 < 6" } }, "sha1-ybrcDXPWLbW/Vl2DnZTsADRoCuk="],
+
+    "@algolia/autocomplete-shared": ["@algolia/autocomplete-shared@1.17.7", "http://registry.m.jd.com/@algolia/autocomplete-shared/download/@algolia/autocomplete-shared-1.17.7.tgz", { "peerDependencies": { "@algolia/client-search": ">= 4.9.1 < 6", "algoliasearch": ">= 4.9.1 < 6" } }, "sha1-EF6ErZ0aMdP7hrog3IkO7+GjE6A="],
+
+    "@algolia/client-abtesting": ["@algolia/client-abtesting@5.35.0", "http://registry.m.jd.com/@algolia/client-abtesting/download/@algolia/client-abtesting-5.35.0.tgz", { "dependencies": { "@algolia/client-common": "5.35.0", "@algolia/requester-browser-xhr": "5.35.0", "@algolia/requester-fetch": "5.35.0", "@algolia/requester-node-http": "5.35.0" } }, "sha1-5Mua2QNXyLJvtvvNAVfMi9G2AO0="],
+
+    "@algolia/client-analytics": ["@algolia/client-analytics@5.35.0", "http://registry.m.jd.com/@algolia/client-analytics/download/@algolia/client-analytics-5.35.0.tgz", { "dependencies": { "@algolia/client-common": "5.35.0", "@algolia/requester-browser-xhr": "5.35.0", "@algolia/requester-fetch": "5.35.0", "@algolia/requester-node-http": "5.35.0" } }, "sha1-/wudnL2gdEctcnotCmsYvMRwdr4="],
+
+    "@algolia/client-common": ["@algolia/client-common@5.35.0", "http://registry.m.jd.com/@algolia/client-common/download/@algolia/client-common-5.35.0.tgz", {}, "sha1-HXKzYwjOqlPX1IjNOhYVBt3rDEI="],
+
+    "@algolia/client-insights": ["@algolia/client-insights@5.35.0", "http://registry.m.jd.com/@algolia/client-insights/download/@algolia/client-insights-5.35.0.tgz", { "dependencies": { "@algolia/client-common": "5.35.0", "@algolia/requester-browser-xhr": "5.35.0", "@algolia/requester-fetch": "5.35.0", "@algolia/requester-node-http": "5.35.0" } }, "sha1-j9Ue6tfYmSVSLUi1wWSz17ZWcHw="],
+
+    "@algolia/client-personalization": ["@algolia/client-personalization@5.35.0", "http://registry.m.jd.com/@algolia/client-personalization/download/@algolia/client-personalization-5.35.0.tgz", { "dependencies": { "@algolia/client-common": "5.35.0", "@algolia/requester-browser-xhr": "5.35.0", "@algolia/requester-fetch": "5.35.0", "@algolia/requester-node-http": "5.35.0" } }, "sha1-pmF2eFEmm4/wkeqpAP4LZbOTc4I="],
+
+    "@algolia/client-query-suggestions": ["@algolia/client-query-suggestions@5.35.0", "http://registry.m.jd.com/@algolia/client-query-suggestions/download/@algolia/client-query-suggestions-5.35.0.tgz", { "dependencies": { "@algolia/client-common": "5.35.0", "@algolia/requester-browser-xhr": "5.35.0", "@algolia/requester-fetch": "5.35.0", "@algolia/requester-node-http": "5.35.0" } }, "sha1-uHBPPNsrSbjwNIu3ejghpf+ltzs="],
+
+    "@algolia/client-search": ["@algolia/client-search@5.35.0", "http://registry.m.jd.com/@algolia/client-search/download/@algolia/client-search-5.35.0.tgz", { "dependencies": { "@algolia/client-common": "5.35.0", "@algolia/requester-browser-xhr": "5.35.0", "@algolia/requester-fetch": "5.35.0", "@algolia/requester-node-http": "5.35.0" } }, "sha1-YUQcTeIS2KGvk6sUBvRv0zhsNaA="],
+
+    "@algolia/ingestion": ["@algolia/ingestion@1.35.0", "http://registry.m.jd.com/@algolia/ingestion/download/@algolia/ingestion-1.35.0.tgz", { "dependencies": { "@algolia/client-common": "5.35.0", "@algolia/requester-browser-xhr": "5.35.0", "@algolia/requester-fetch": "5.35.0", "@algolia/requester-node-http": "5.35.0" } }, "sha1-+yY8wZDaQhdW+PUuP+Xlr9yJ9ow="],
+
+    "@algolia/monitoring": ["@algolia/monitoring@1.35.0", "http://registry.m.jd.com/@algolia/monitoring/download/@algolia/monitoring-1.35.0.tgz", { "dependencies": { "@algolia/client-common": "5.35.0", "@algolia/requester-browser-xhr": "5.35.0", "@algolia/requester-fetch": "5.35.0", "@algolia/requester-node-http": "5.35.0" } }, "sha1-a+Kz4qSDKLV9mIJ9qchewrQtSdo="],
+
+    "@algolia/recommend": ["@algolia/recommend@5.35.0", "http://registry.m.jd.com/@algolia/recommend/download/@algolia/recommend-5.35.0.tgz", { "dependencies": { "@algolia/client-common": "5.35.0", "@algolia/requester-browser-xhr": "5.35.0", "@algolia/requester-fetch": "5.35.0", "@algolia/requester-node-http": "5.35.0" } }, "sha1-A8PR270bWwfdqYNQtFZAyBkIEhE="],
+
+    "@algolia/requester-browser-xhr": ["@algolia/requester-browser-xhr@5.35.0", "http://registry.m.jd.com/@algolia/requester-browser-xhr/download/@algolia/requester-browser-xhr-5.35.0.tgz", { "dependencies": { "@algolia/client-common": "5.35.0" } }, "sha1-scJvyb6AoN3eay5F+1DVLHxsBfQ="],
+
+    "@algolia/requester-fetch": ["@algolia/requester-fetch@5.35.0", "http://registry.m.jd.com/@algolia/requester-fetch/download/@algolia/requester-fetch-5.35.0.tgz", { "dependencies": { "@algolia/client-common": "5.35.0" } }, "sha1-KYFcW/UBFI6mGe2WuuCcCZpcztQ="],
+
+    "@algolia/requester-node-http": ["@algolia/requester-node-http@5.35.0", "http://registry.m.jd.com/@algolia/requester-node-http/download/@algolia/requester-node-http-5.35.0.tgz", { "dependencies": { "@algolia/client-common": "5.35.0" } }, "sha1-kJW4Cgrnf1dANiYfRAU2NuMdG68="],
+
+    "@babel/helper-string-parser": ["@babel/helper-string-parser@7.27.1", "http://registry.m.jd.com/@babel/helper-string-parser/download/@babel/helper-string-parser-7.27.1.tgz", {}, "sha1-VNp5YJerGc5n7Z+ItHuy7Ek2doc="],
+
+    "@babel/helper-validator-identifier": ["@babel/helper-validator-identifier@7.27.1", "http://registry.m.jd.com/@babel/helper-validator-identifier/download/@babel/helper-validator-identifier-7.27.1.tgz", {}, "sha1-pwVNzBRaln3U3I/uhFpXwTFsnfg="],
+
+    "@babel/parser": ["@babel/parser@7.28.3", "http://registry.m.jd.com/@babel/parser/download/@babel/parser-7.28.3.tgz", { "dependencies": { "@babel/types": "^7.28.2" }, "bin": "./bin/babel-parser.js" }, "sha1-0tJbgUYhvKX+nRcryTeSVH56KnE="],
+
+    "@babel/types": ["@babel/types@7.28.2", "http://registry.m.jd.com/@babel/types/download/@babel/types-7.28.2.tgz", { "dependencies": { "@babel/helper-string-parser": "^7.27.1", "@babel/helper-validator-identifier": "^7.27.1" } }, "sha1-2p2whWqaiOChOwGYgddRNYjPcSs="],
+
+    "@bufbuild/protobuf": ["@bufbuild/protobuf@2.6.2", "http://registry.m.jd.com/@bufbuild/protobuf/download/@bufbuild/protobuf-2.6.2.tgz", {}, "sha1-KjRfzhmPiFjHvIB+1/CBPRYzROs="],
+
+    "@docsearch/css": ["@docsearch/css@3.8.2", "http://registry.m.jd.com/@docsearch/css/download/@docsearch/css-3.8.2.tgz", {}, "sha1-eXPOtoksMPFUuiVM0FxWIlekSXc="],
+
+    "@docsearch/js": ["@docsearch/js@3.8.2", "http://registry.m.jd.com/@docsearch/js/download/@docsearch/js-3.8.2.tgz", { "dependencies": { "@docsearch/react": "3.8.2", "preact": "^10.0.0" } }, "sha1-vc/Jg3cA6zhFO4jiEatcxaOBPMY="],
+
+    "@docsearch/react": ["@docsearch/react@3.8.2", "http://registry.m.jd.com/@docsearch/react/download/@docsearch/react-3.8.2.tgz", { "dependencies": { "@algolia/autocomplete-core": "1.17.7", "@algolia/autocomplete-preset-algolia": "1.17.7", "@docsearch/css": "3.8.2", "algoliasearch": "^5.14.2" }, "peerDependencies": { "@types/react": ">= 16.8.0 < 19.0.0", "react": ">= 16.8.0 < 19.0.0", "react-dom": ">= 16.8.0 < 19.0.0", "search-insights": ">= 1 < 3" } }, "sha1-exHTm2HJdsCqn73mbmtzsw86zUI="],
+
+    "@drauu/core": ["@drauu/core@0.4.3", "http://registry.m.jd.com/@drauu/core/download/@drauu/core-0.4.3.tgz", {}, "sha1-LAUOoCGz7mQ/9CAOZLvyUVB7wxY="],
+
+    "@esbuild/aix-ppc64": ["@esbuild/aix-ppc64@0.21.5", "http://registry.m.jd.com/@esbuild/aix-ppc64/download/@esbuild/aix-ppc64-0.21.5.tgz", {}, "sha1-xxhKMmUz/N8bjuBzPiHHE7l1V18="],
+
+    "@esbuild/android-arm": ["@esbuild/android-arm@0.21.5", "http://registry.m.jd.com/@esbuild/android-arm/download/@esbuild/android-arm-0.21.5.tgz", {}, "sha1-mwQ4T7dxkm36bXrQQyTssqubLig="],
+
+    "@esbuild/android-arm64": ["@esbuild/android-arm64@0.21.5", "http://registry.m.jd.com/@esbuild/android-arm64/download/@esbuild/android-arm64-0.21.5.tgz", {}, "sha1-Cdm0NXeA2p6jp9+4M6Hx/0ObQFI="],
+
+    "@esbuild/android-x64": ["@esbuild/android-x64@0.21.5", "http://registry.m.jd.com/@esbuild/android-x64/download/@esbuild/android-x64-0.21.5.tgz", {}, "sha1-KZGOwtt1TO3LbBsE3ozWVHr2Rh4="],
+
+    "@esbuild/darwin-arm64": ["@esbuild/darwin-arm64@0.21.5", "http://registry.m.jd.com/@esbuild/darwin-arm64/download/@esbuild/darwin-arm64-0.21.5.tgz", {}, "sha1-5JW1OWYOUWkPOSivUKdvsKbM/yo="],
+
+    "@esbuild/darwin-x64": ["@esbuild/darwin-x64@0.21.5", "http://registry.m.jd.com/@esbuild/darwin-x64/download/@esbuild/darwin-x64-0.21.5.tgz", {}, "sha1-wTg4+lc3KDmr3dyR1xVCzuouHiI="],
+
+    "@esbuild/freebsd-arm64": ["@esbuild/freebsd-arm64@0.21.5", "http://registry.m.jd.com/@esbuild/freebsd-arm64/download/@esbuild/freebsd-arm64-0.21.5.tgz", {}, "sha1-ZGuYmqIL+J/Qcd1dv61po1QuVQ4="],
+
+    "@esbuild/freebsd-x64": ["@esbuild/freebsd-x64@0.21.5", "http://registry.m.jd.com/@esbuild/freebsd-x64/download/@esbuild/freebsd-x64-0.21.5.tgz", {}, "sha1-qmFc/ICvlU00WJBuOMoiwYz1wmE="],
+
+    "@esbuild/linux-arm": ["@esbuild/linux-arm@0.21.5", "http://registry.m.jd.com/@esbuild/linux-arm/download/@esbuild/linux-arm-0.21.5.tgz", {}, "sha1-/G/RGorKVsH284lPK+oEefj2Jrk="],
+
+    "@esbuild/linux-arm64": ["@esbuild/linux-arm64@0.21.5", "http://registry.m.jd.com/@esbuild/linux-arm64/download/@esbuild/linux-arm64-0.21.5.tgz", {}, "sha1-cKxvoU9ct+H3+Ie8/7aArQmSK1s="],
+
+    "@esbuild/linux-ia32": ["@esbuild/linux-ia32@0.21.5", "http://registry.m.jd.com/@esbuild/linux-ia32/download/@esbuild/linux-ia32-0.21.5.tgz", {}, "sha1-MnH1Oz+T49CT1RjRZJ1taNNG7eI="],
+
+    "@esbuild/linux-loong64": ["@esbuild/linux-loong64@0.21.5", "http://registry.m.jd.com/@esbuild/linux-loong64/download/@esbuild/linux-loong64-0.21.5.tgz", {}, "sha1-7WLgQjjFcCauqDHFoTC3PA+fJt8="],
+
+    "@esbuild/linux-mips64el": ["@esbuild/linux-mips64el@0.21.5", "http://registry.m.jd.com/@esbuild/linux-mips64el/download/@esbuild/linux-mips64el-0.21.5.tgz", {}, "sha1-55uOtIvzsQb63sGsgkD7l7TmTL4="],
+
+    "@esbuild/linux-ppc64": ["@esbuild/linux-ppc64@0.21.5", "http://registry.m.jd.com/@esbuild/linux-ppc64/download/@esbuild/linux-ppc64-0.21.5.tgz", {}, "sha1-XyIDhgoUO5kZ04PvdXNSH7FUw+Q="],
+
+    "@esbuild/linux-riscv64": ["@esbuild/linux-riscv64@0.21.5", "http://registry.m.jd.com/@esbuild/linux-riscv64/download/@esbuild/linux-riscv64-0.21.5.tgz", {}, "sha1-B7yv2ZMi1a9i9hjLnmqbf0u4Jdw="],
+
+    "@esbuild/linux-s390x": ["@esbuild/linux-s390x@0.21.5", "http://registry.m.jd.com/@esbuild/linux-s390x/download/@esbuild/linux-s390x-0.21.5.tgz", {}, "sha1-t8z2hnUdaj5EuGJ6uryL4+9i2N4="],
+
+    "@esbuild/linux-x64": ["@esbuild/linux-x64@0.21.5", "http://registry.m.jd.com/@esbuild/linux-x64/download/@esbuild/linux-x64-0.21.5.tgz", {}, "sha1-bY8Mdo4HDmQwmvgAS7lOaKsrs7A="],
+
+    "@esbuild/netbsd-x64": ["@esbuild/netbsd-x64@0.21.5", "http://registry.m.jd.com/@esbuild/netbsd-x64/download/@esbuild/netbsd-x64-0.21.5.tgz", {}, "sha1-u+Qw9g03jsuI3sshnGAmZzh6YEc="],
+
+    "@esbuild/openbsd-x64": ["@esbuild/openbsd-x64@0.21.5", "http://registry.m.jd.com/@esbuild/openbsd-x64/download/@esbuild/openbsd-x64-0.21.5.tgz", {}, "sha1-mdHPKTcnlWDSEEgh9czOIgyyr3A="],
+
+    "@esbuild/sunos-x64": ["@esbuild/sunos-x64@0.21.5", "http://registry.m.jd.com/@esbuild/sunos-x64/download/@esbuild/sunos-x64-0.21.5.tgz", {}, "sha1-CHQVEsENUpVmurqDe0/gUsjzSHs="],
+
+    "@esbuild/win32-arm64": ["@esbuild/win32-arm64@0.21.5", "http://registry.m.jd.com/@esbuild/win32-arm64/download/@esbuild/win32-arm64-0.21.5.tgz", {}, "sha1-Z1tzhTmEESQHNQFhRKsumaYPx10="],
+
+    "@esbuild/win32-ia32": ["@esbuild/win32-ia32@0.21.5", "http://registry.m.jd.com/@esbuild/win32-ia32/download/@esbuild/win32-ia32-0.21.5.tgz", {}, "sha1-G/w86YqmypoJaeTSr3IUTFnBGTs="],
+
+    "@esbuild/win32-x64": ["@esbuild/win32-x64@0.21.5", "http://registry.m.jd.com/@esbuild/win32-x64/download/@esbuild/win32-x64-0.21.5.tgz", {}, "sha1-rK01HVgtFXuxRVNdsqb/U91RS1w="],
+
+    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.48", "http://registry.m.jd.com/@iconify-json/simple-icons/download/@iconify-json/simple-icons-1.2.48.tgz", { "dependencies": { "@iconify/types": "*" } }, "sha1-nwdJ5egSLCH7/dpLdjYn51ALd7s="],
+
+    "@iconify/types": ["@iconify/types@2.0.0", "http://registry.m.jd.com/@iconify/types/download/@iconify/types-2.0.0.tgz", {}, "sha1-qw6epoHWyKEhTzDNdB/jogzFf1c="],
+
+    "@isaacs/cliui": ["@isaacs/cliui@8.0.2", "http://registry.m.jd.com/@isaacs/cliui/download/@isaacs/cliui-8.0.2.tgz", { "dependencies": { "string-width": "^5.1.2", "string-width-cjs": "npm:string-width@^4.2.0", "strip-ansi": "^7.0.1", "strip-ansi-cjs": "npm:strip-ansi@^6.0.1", "wrap-ansi": "^8.1.0", "wrap-ansi-cjs": "npm:wrap-ansi@^7.0.0" } }, "sha1-s3Znt7wYHBaHgiWbq0JHT79StVA="],
+
+    "@jridgewell/gen-mapping": ["@jridgewell/gen-mapping@0.3.13", "http://registry.m.jd.com/@jridgewell/gen-mapping/download/@jridgewell/gen-mapping-0.3.13.tgz", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.0", "@jridgewell/trace-mapping": "^0.3.24" } }, "sha1-Y0Khn0Q0dRjJPkOxrGnes8Rlah8="],
+
+    "@jridgewell/resolve-uri": ["@jridgewell/resolve-uri@3.1.2", "http://registry.m.jd.com/@jridgewell/resolve-uri/download/@jridgewell/resolve-uri-3.1.2.tgz", {}, "sha1-eg7mAfYPmaIMfHxf8MgDiMEYm9Y="],
+
+    "@jridgewell/source-map": ["@jridgewell/source-map@0.3.11", "http://registry.m.jd.com/@jridgewell/source-map/download/@jridgewell/source-map-0.3.11.tgz", { "dependencies": { "@jridgewell/gen-mapping": "^0.3.5", "@jridgewell/trace-mapping": "^0.3.25" } }, "sha1-shg1y9Nttla4V8KtAuvUE8wTqbo="],
+
+    "@jridgewell/sourcemap-codec": ["@jridgewell/sourcemap-codec@1.5.5", "http://registry.m.jd.com/@jridgewell/sourcemap-codec/download/@jridgewell/sourcemap-codec-1.5.5.tgz", {}, "sha1-aRKwDSxjHA0Vzhp6tXzWV/Ko+Lo="],
+
+    "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.30", "http://registry.m.jd.com/@jridgewell/trace-mapping/download/@jridgewell/trace-mapping-0.3.30.tgz", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha1-SnbE2u7l3wn105QOCHRC+zbOK5k="],
+
+    "@parcel/watcher": ["@parcel/watcher@2.5.1", "http://registry.m.jd.com/@parcel/watcher/download/@parcel/watcher-2.5.1.tgz", { "dependencies": { "detect-libc": "^1.0.3", "is-glob": "^4.0.3", "micromatch": "^4.0.5", "node-addon-api": "^7.0.0" }, "optionalDependencies": { "@parcel/watcher-android-arm64": "2.5.1", "@parcel/watcher-darwin-arm64": "2.5.1", "@parcel/watcher-darwin-x64": "2.5.1", "@parcel/watcher-freebsd-x64": "2.5.1", "@parcel/watcher-linux-arm-glibc": "2.5.1", "@parcel/watcher-linux-arm-musl": "2.5.1", "@parcel/watcher-linux-arm64-glibc": "2.5.1", "@parcel/watcher-linux-arm64-musl": "2.5.1", "@parcel/watcher-linux-x64-glibc": "2.5.1", "@parcel/watcher-linux-x64-musl": "2.5.1", "@parcel/watcher-win32-arm64": "2.5.1", "@parcel/watcher-win32-ia32": "2.5.1", "@parcel/watcher-win32-x64": "2.5.1" } }, "sha1-NCUHqc+q8XJHmogjCd7x6ZH7EgA="],
+
+    "@parcel/watcher-android-arm64": ["@parcel/watcher-android-arm64@2.5.1", "http://registry.m.jd.com/@parcel/watcher-android-arm64/download/@parcel/watcher-android-arm64-2.5.1.tgz", {}, "sha1-UH+DbX4gQveYx9B60Zw1RvmEisE="],
+
+    "@parcel/watcher-darwin-arm64": ["@parcel/watcher-darwin-arm64@2.5.1", "http://registry.m.jd.com/@parcel/watcher-darwin-arm64/download/@parcel/watcher-darwin-arm64-2.5.1.tgz", {}, "sha1-PSbc443mWQ73nEfsLFV5PAatT2c="],
+
+    "@parcel/watcher-darwin-x64": ["@parcel/watcher-darwin-x64@2.5.1", "http://registry.m.jd.com/@parcel/watcher-darwin-x64/download/@parcel/watcher-darwin-x64-2.5.1.tgz", {}, "sha1-mfOvOGkGnM93Tk3fzPfmT9IxHvg="],
+
+    "@parcel/watcher-freebsd-x64": ["@parcel/watcher-freebsd-x64@2.5.1", "http://registry.m.jd.com/@parcel/watcher-freebsd-x64/download/@parcel/watcher-freebsd-x64-2.5.1.tgz", {}, "sha1-FNaFd0Gp9R3+UdWwi3yK/bxzrZs="],
+
+    "@parcel/watcher-linux-arm-glibc": ["@parcel/watcher-linux-arm-glibc@2.5.1", "http://registry.m.jd.com/@parcel/watcher-linux-arm-glibc/download/@parcel/watcher-linux-arm-glibc-2.5.1.tgz", {}, "sha1-Q8MkbWiSOB20c7tPZjIprSC2CaE="],
+
+    "@parcel/watcher-linux-arm-musl": ["@parcel/watcher-linux-arm-musl@2.5.1", "http://registry.m.jd.com/@parcel/watcher-linux-arm-musl/download/@parcel/watcher-linux-arm-musl-2.5.1.tgz", {}, "sha1-ZjdQ9wkLtieNIhDeZD64o/eA0I4="],
+
+    "@parcel/watcher-linux-arm64-glibc": ["@parcel/watcher-linux-arm64-glibc@2.5.1", "http://registry.m.jd.com/@parcel/watcher-linux-arm64-glibc/download/@parcel/watcher-linux-arm64-glibc-2.5.1.tgz", {}, "sha1-umDh9Wl39+R81+Ma1l0V/cvQfjA="],
+
+    "@parcel/watcher-linux-arm64-musl": ["@parcel/watcher-linux-arm64-musl@2.5.1", "http://registry.m.jd.com/@parcel/watcher-linux-arm64-musl/download/@parcel/watcher-linux-arm64-musl-2.5.1.tgz", {}, "sha1-9/vN/y8ExSb5bqwB+XQZpqmYVdI="],
+
+    "@parcel/watcher-linux-x64-glibc": ["@parcel/watcher-linux-x64-glibc@2.5.1", "http://registry.m.jd.com/@parcel/watcher-linux-x64-glibc/download/@parcel/watcher-linux-x64-glibc-2.5.1.tgz", {}, "sha1-TS6g9jPrGRfYPUgzks5hgbapLk4="],
+
+    "@parcel/watcher-linux-x64-musl": ["@parcel/watcher-linux-x64-musl@2.5.1", "http://registry.m.jd.com/@parcel/watcher-linux-x64-musl/download/@parcel/watcher-linux-x64-musl-2.5.1.tgz", {}, "sha1-J3s0awXbVPVWVzAd13vfmdY2Bu4="],
+
+    "@parcel/watcher-win32-arm64": ["@parcel/watcher-win32-arm64@2.5.1", "http://registry.m.jd.com/@parcel/watcher-win32-arm64/download/@parcel/watcher-win32-arm64-2.5.1.tgz", {}, "sha1-fp4ComeE1HUD3h0Q6Oq2zOtSQkM="],
+
+    "@parcel/watcher-win32-ia32": ["@parcel/watcher-win32-ia32@2.5.1", "http://registry.m.jd.com/@parcel/watcher-win32-ia32/download/@parcel/watcher-win32-ia32-2.5.1.tgz", {}, "sha1-LQ+U+lmoc83FhL9/ax3GKN35duY="],
+
+    "@parcel/watcher-win32-x64": ["@parcel/watcher-win32-x64@2.5.1", "http://registry.m.jd.com/@parcel/watcher-win32-x64/download/@parcel/watcher-win32-x64-2.5.1.tgz", {}, "sha1-rlJpMllmS6byIo+mHX7kS2TqCUc="],
+
+    "@pkgjs/parseargs": ["@pkgjs/parseargs@0.11.0", "http://registry.m.jd.com/@pkgjs/parseargs/download/@pkgjs/parseargs-0.11.0.tgz", {}, "sha1-p36nQvqyV3UUVDTrHSMoz1ATrDM="],
+
+    "@rollup/rollup-android-arm-eabi": ["@rollup/rollup-android-arm-eabi@4.46.4", "http://registry.m.jd.com/@rollup/rollup-android-arm-eabi/download/@rollup/rollup-android-arm-eabi-4.46.4.tgz", {}, "sha1-gPGasWAF7Y7uKC9eXq7UvQWcr8E="],
+
+    "@rollup/rollup-android-arm64": ["@rollup/rollup-android-arm64@4.46.4", "http://registry.m.jd.com/@rollup/rollup-android-arm64/download/@rollup/rollup-android-arm64-4.46.4.tgz", {}, "sha1-7h3KDv84eC08PHk9StoBWdOzS7I="],
+
+    "@rollup/rollup-darwin-arm64": ["@rollup/rollup-darwin-arm64@4.46.4", "http://registry.m.jd.com/@rollup/rollup-darwin-arm64/download/@rollup/rollup-darwin-arm64-4.46.4.tgz", {}, "sha1-fKwblZlQfUUY8jZiCVKRo2kDbrY="],
+
+    "@rollup/rollup-darwin-x64": ["@rollup/rollup-darwin-x64@4.46.4", "http://registry.m.jd.com/@rollup/rollup-darwin-x64/download/@rollup/rollup-darwin-x64-4.46.4.tgz", {}, "sha1-/TN2QFlB3du26VU+Bea/ZmdhnbI="],
+
+    "@rollup/rollup-freebsd-arm64": ["@rollup/rollup-freebsd-arm64@4.46.4", "http://registry.m.jd.com/@rollup/rollup-freebsd-arm64/download/@rollup/rollup-freebsd-arm64-4.46.4.tgz", {}, "sha1-qMvkiWTZA81BU5oghbgxICfu+fg="],
+
+    "@rollup/rollup-freebsd-x64": ["@rollup/rollup-freebsd-x64@4.46.4", "http://registry.m.jd.com/@rollup/rollup-freebsd-x64/download/@rollup/rollup-freebsd-x64-4.46.4.tgz", {}, "sha1-feSEeSN19mxGVfUC4dHnR1aFISA="],
+
+    "@rollup/rollup-linux-arm-gnueabihf": ["@rollup/rollup-linux-arm-gnueabihf@4.46.4", "http://registry.m.jd.com/@rollup/rollup-linux-arm-gnueabihf/download/@rollup/rollup-linux-arm-gnueabihf-4.46.4.tgz", {}, "sha1-+JRG1SiLbcVNS6l8Ms+1QEzVcRA="],
+
+    "@rollup/rollup-linux-arm-musleabihf": ["@rollup/rollup-linux-arm-musleabihf@4.46.4", "http://registry.m.jd.com/@rollup/rollup-linux-arm-musleabihf/download/@rollup/rollup-linux-arm-musleabihf-4.46.4.tgz", {}, "sha1-QVmWa21GrwtlPOqSOC4H/CUZj7g="],
+
+    "@rollup/rollup-linux-arm64-gnu": ["@rollup/rollup-linux-arm64-gnu@4.46.4", "http://registry.m.jd.com/@rollup/rollup-linux-arm64-gnu/download/@rollup/rollup-linux-arm64-gnu-4.46.4.tgz", {}, "sha1-kTKXbNfIM+Wq2WoLRiplQ7pOSNA="],
+
+    "@rollup/rollup-linux-arm64-musl": ["@rollup/rollup-linux-arm64-musl@4.46.4", "http://registry.m.jd.com/@rollup/rollup-linux-arm64-musl/download/@rollup/rollup-linux-arm64-musl-4.46.4.tgz", {}, "sha1-hd8jnQgpuLPF2raMtOi+7tZVE50="],
+
+    "@rollup/rollup-linux-loongarch64-gnu": ["@rollup/rollup-linux-loongarch64-gnu@4.46.4", "http://registry.m.jd.com/@rollup/rollup-linux-loongarch64-gnu/download/@rollup/rollup-linux-loongarch64-gnu-4.46.4.tgz", {}, "sha1-Q87y5ThyQoI7PKYI1ApKhQtcL/8="],
+
+    "@rollup/rollup-linux-ppc64-gnu": ["@rollup/rollup-linux-ppc64-gnu@4.46.4", "http://registry.m.jd.com/@rollup/rollup-linux-ppc64-gnu/download/@rollup/rollup-linux-ppc64-gnu-4.46.4.tgz", {}, "sha1-VLTTmocAYVHLjqWNvMBVlrUwdpo="],
+
+    "@rollup/rollup-linux-riscv64-gnu": ["@rollup/rollup-linux-riscv64-gnu@4.46.4", "http://registry.m.jd.com/@rollup/rollup-linux-riscv64-gnu/download/@rollup/rollup-linux-riscv64-gnu-4.46.4.tgz", {}, "sha1-hyqRVcnX9AhcWCgnpaFd/Ws1kKw="],
+
+    "@rollup/rollup-linux-riscv64-musl": ["@rollup/rollup-linux-riscv64-musl@4.46.4", "http://registry.m.jd.com/@rollup/rollup-linux-riscv64-musl/download/@rollup/rollup-linux-riscv64-musl-4.46.4.tgz", {}, "sha1-HBjImH1jkTjL/RWkUI0jNxXApyo="],
+
+    "@rollup/rollup-linux-s390x-gnu": ["@rollup/rollup-linux-s390x-gnu@4.46.4", "http://registry.m.jd.com/@rollup/rollup-linux-s390x-gnu/download/@rollup/rollup-linux-s390x-gnu-4.46.4.tgz", {}, "sha1-F9jt83bjGyQu1YmWnGhF1jq+9/Y="],
+
+    "@rollup/rollup-linux-x64-gnu": ["@rollup/rollup-linux-x64-gnu@4.46.4", "http://registry.m.jd.com/@rollup/rollup-linux-x64-gnu/download/@rollup/rollup-linux-x64-gnu-4.46.4.tgz", {}, "sha1-bwa/Y02415LU4/om/dbsQIXwSlg="],
+
+    "@rollup/rollup-linux-x64-musl": ["@rollup/rollup-linux-x64-musl@4.46.4", "http://registry.m.jd.com/@rollup/rollup-linux-x64-musl/download/@rollup/rollup-linux-x64-musl-4.46.4.tgz", {}, "sha1-AqeN29hTNlEyQiQ1FTt4042rRU4="],
+
+    "@rollup/rollup-win32-arm64-msvc": ["@rollup/rollup-win32-arm64-msvc@4.46.4", "http://registry.m.jd.com/@rollup/rollup-win32-arm64-msvc/download/@rollup/rollup-win32-arm64-msvc-4.46.4.tgz", {}, "sha1-Hy3VugssZF/9izRFcwsvz3QgSKw="],
+
+    "@rollup/rollup-win32-ia32-msvc": ["@rollup/rollup-win32-ia32-msvc@4.46.4", "http://registry.m.jd.com/@rollup/rollup-win32-ia32-msvc/download/@rollup/rollup-win32-ia32-msvc-4.46.4.tgz", {}, "sha1-aAoEV12Z42uZNBquEKBYQXwM4Kw="],
+
+    "@rollup/rollup-win32-x64-msvc": ["@rollup/rollup-win32-x64-msvc@4.46.4", "http://registry.m.jd.com/@rollup/rollup-win32-x64-msvc/download/@rollup/rollup-win32-x64-msvc-4.46.4.tgz", {}, "sha1-4GF2Rimk1l5FpDs5yKA5T+sewDk="],
+
+    "@shikijs/core": ["@shikijs/core@2.5.0", "http://registry.m.jd.com/@shikijs/core/download/@shikijs/core-2.5.0.tgz", { "dependencies": { "@shikijs/engine-javascript": "2.5.0", "@shikijs/engine-oniguruma": "2.5.0", "@shikijs/types": "2.5.0", "@shikijs/vscode-textmate": "^10.0.2", "@types/hast": "^3.0.4", "hast-util-to-html": "^9.0.4" } }, "sha1-4U0zlh36MUE5PUp2/Ikj0NHEti8="],
+
+    "@shikijs/engine-javascript": ["@shikijs/engine-javascript@2.5.0", "http://registry.m.jd.com/@shikijs/engine-javascript/download/@shikijs/engine-javascript-2.5.0.tgz", { "dependencies": { "@shikijs/types": "2.5.0", "@shikijs/vscode-textmate": "^10.0.2", "oniguruma-to-es": "^3.1.0" } }, "sha1-4EXG7PvabJkTdUewpILguH8QU/w="],
+
+    "@shikijs/engine-oniguruma": ["@shikijs/engine-oniguruma@2.5.0", "http://registry.m.jd.com/@shikijs/engine-oniguruma/download/@shikijs/engine-oniguruma-2.5.0.tgz", { "dependencies": { "@shikijs/types": "2.5.0", "@shikijs/vscode-textmate": "^10.0.2" } }, "sha1-Iw3laTzB2mydWcetg1k8ICcnSBc="],
+
+    "@shikijs/langs": ["@shikijs/langs@2.5.0", "http://registry.m.jd.com/@shikijs/langs/download/@shikijs/langs-2.5.0.tgz", { "dependencies": { "@shikijs/types": "2.5.0" } }, "sha1-l6tQxJWSLMHKBuGSmFso3HPeXVA="],
+
+    "@shikijs/themes": ["@shikijs/themes@2.5.0", "http://registry.m.jd.com/@shikijs/themes/download/@shikijs/themes-2.5.0.tgz", { "dependencies": { "@shikijs/types": "2.5.0" } }, "sha1-jGrs9z9UVWgci+wVeXz2eBYolss="],
+
+    "@shikijs/transformers": ["@shikijs/transformers@2.5.0", "http://registry.m.jd.com/@shikijs/transformers/download/@shikijs/transformers-2.5.0.tgz", { "dependencies": { "@shikijs/core": "2.5.0", "@shikijs/types": "2.5.0" } }, "sha1-GQyEeG/wbEF1gKt5F3M4qUcWjFU="],
+
+    "@shikijs/types": ["@shikijs/types@2.5.0", "http://registry.m.jd.com/@shikijs/types/download/@shikijs/types-2.5.0.tgz", { "dependencies": { "@shikijs/vscode-textmate": "^10.0.2", "@types/hast": "^3.0.4" } }, "sha1-6UnHOEgCcDpIudZCXdQWc8Fk32k="],
+
+    "@shikijs/vscode-textmate": ["@shikijs/vscode-textmate@10.0.2", "http://registry.m.jd.com/@shikijs/vscode-textmate/download/@shikijs/vscode-textmate-10.0.2.tgz", {}, "sha1-qQqzHQzB37VMZqaeUVv2JPp7IiQ="],
+
     "@types/bun": ["@types/bun@1.2.19", "http://registry.m.jd.com/@types/bun/download/@types/bun-1.2.19.tgz", { "dependencies": { "bun-types": "1.2.19" } }, "sha1-P7N6WeVtXdInZlPbW2oCKYm25GU="],
+
+    "@types/cookie": ["@types/cookie@0.6.0", "http://registry.m.jd.com/@types/cookie/download/@types/cookie-0.6.0.tgz", {}, "sha1-6sOX8ovx1q4K4IE2PsovQlvt8NU="],
+
+    "@types/estree": ["@types/estree@1.0.8", "http://registry.m.jd.com/@types/estree/download/@types/estree-1.0.8.tgz", {}, "sha1-lYuRyZGxhnztMYvt6g4hXuBQcm4="],
+
+    "@types/hast": ["@types/hast@3.0.4", "http://registry.m.jd.com/@types/hast/download/@types/hast-3.0.4.tgz", { "dependencies": { "@types/unist": "*" } }, "sha1-HWs5mTuCzqateDlFsFCMJZA+Fao="],
+
+    "@types/linkify-it": ["@types/linkify-it@5.0.0", "http://registry.m.jd.com/@types/linkify-it/download/@types/linkify-it-5.0.0.tgz", {}, "sha1-IUEwAZcxBs2hw6m5Hu3UzNVGnXY="],
+
+    "@types/markdown-it": ["@types/markdown-it@14.1.2", "http://registry.m.jd.com/@types/markdown-it/download/@types/markdown-it-14.1.2.tgz", { "dependencies": { "@types/linkify-it": "^5", "@types/mdurl": "^2" } }, "sha1-V/JTKggABn2bk081IUKaLov7TGE="],
+
+    "@types/mdast": ["@types/mdast@4.0.4", "http://registry.m.jd.com/@types/mdast/download/@types/mdast-4.0.4.tgz", { "dependencies": { "@types/unist": "*" } }, "sha1-fM9y7dLxqn3TQ34YDGQ3NYWATdY="],
+
+    "@types/mdurl": ["@types/mdurl@2.0.0", "http://registry.m.jd.com/@types/mdurl/download/@types/mdurl-2.0.0.tgz", {}, "sha1-1Dh4tbICImghY65viXsgRHIzvf0="],
 
     "@types/node": ["@types/node@24.3.0", "http://registry.m.jd.com/@types/node/download/@types/node-24.3.0.tgz", { "dependencies": { "undici-types": "~7.10.0" } }, "sha1-ibCfRcuajuaUZvGO5YZOTD64Tew="],
 
     "@types/react": ["@types/react@19.1.10", "http://registry.m.jd.com/@types/react/download/@types/react-19.1.10.tgz", { "dependencies": { "csstype": "^3.0.2" } }, "sha1-oFAVlS7zKOG4VXnIOacTBLB9Idk="],
 
+    "@types/unist": ["@types/unist@3.0.3", "http://registry.m.jd.com/@types/unist/download/@types/unist-3.0.3.tgz", {}, "sha1-rKqw+RnOaczmKcLU7S60rcG2wgw="],
+
+    "@types/web-bluetooth": ["@types/web-bluetooth@0.0.21", "http://registry.m.jd.com/@types/web-bluetooth/download/@types/web-bluetooth-0.0.21.tgz", {}, "sha1-UlQzx4Su2bRXqqDuPZKutx80a2M="],
+
+    "@ungap/structured-clone": ["@ungap/structured-clone@1.3.0", "http://registry.m.jd.com/@ungap/structured-clone/download/@ungap/structured-clone-1.3.0.tgz", {}, "sha1-0Gu7OE689sUF/eHD0O1N3/4Kr/g="],
+
+    "@vitejs/plugin-vue": ["@vitejs/plugin-vue@5.2.4", "http://registry.m.jd.com/@vitejs/plugin-vue/download/@vitejs/plugin-vue-5.2.4.tgz", { "peerDependencies": { "vite": "^5.0.0 || ^6.0.0", "vue": "^3.2.25" } }, "sha1-nopRLrF0v8KjM7qVm7+d5CjYmtg="],
+
+    "@vue/compiler-core": ["@vue/compiler-core@3.5.19", "http://registry.m.jd.com/@vue/compiler-core/download/@vue/compiler-core-3.5.19.tgz", { "dependencies": { "@babel/parser": "^7.28.3", "@vue/shared": "3.5.19", "entities": "^4.5.0", "estree-walker": "^2.0.2", "source-map-js": "^1.2.1" } }, "sha1-8UHTW2G1XOcsPLtNye7KOCHUUao="],
+
+    "@vue/compiler-dom": ["@vue/compiler-dom@3.5.19", "http://registry.m.jd.com/@vue/compiler-dom/download/@vue/compiler-dom-3.5.19.tgz", { "dependencies": { "@vue/compiler-core": "3.5.19", "@vue/shared": "3.5.19" } }, "sha1-/FfZ3KSYffZ9bOZNvdqsbXPxpu8="],
+
+    "@vue/compiler-sfc": ["@vue/compiler-sfc@3.5.19", "http://registry.m.jd.com/@vue/compiler-sfc/download/@vue/compiler-sfc-3.5.19.tgz", { "dependencies": { "@babel/parser": "^7.28.3", "@vue/compiler-core": "3.5.19", "@vue/compiler-dom": "3.5.19", "@vue/compiler-ssr": "3.5.19", "@vue/shared": "3.5.19", "estree-walker": "^2.0.2", "magic-string": "^0.30.17", "postcss": "^8.5.6", "source-map-js": "^1.2.1" } }, "sha1-f5eSrX3l1L6bajISnHXh9s1NoBU="],
+
+    "@vue/compiler-ssr": ["@vue/compiler-ssr@3.5.19", "http://registry.m.jd.com/@vue/compiler-ssr/download/@vue/compiler-ssr-3.5.19.tgz", { "dependencies": { "@vue/compiler-dom": "3.5.19", "@vue/shared": "3.5.19" } }, "sha1-Fxnn/abVT1aWymPU1AKBZowOYBw="],
+
+    "@vue/devtools-api": ["@vue/devtools-api@7.7.7", "http://registry.m.jd.com/@vue/devtools-api/download/@vue/devtools-api-7.7.7.tgz", { "dependencies": { "@vue/devtools-kit": "^7.7.7" } }, "sha1-XvX1X2A5YiByWic1SMDX7pg9XTQ="],
+
+    "@vue/devtools-kit": ["@vue/devtools-kit@7.7.7", "http://registry.m.jd.com/@vue/devtools-kit/download/@vue/devtools-kit-7.7.7.tgz", { "dependencies": { "@vue/devtools-shared": "^7.7.7", "birpc": "^2.3.0", "hookable": "^5.5.3", "mitt": "^3.0.1", "perfect-debounce": "^1.0.0", "speakingurl": "^14.0.1", "superjson": "^2.2.2" } }, "sha1-QaZPlSbpNjMxxyQFVE3wIM4uNkE="],
+
+    "@vue/devtools-shared": ["@vue/devtools-shared@7.7.7", "http://registry.m.jd.com/@vue/devtools-shared/download/@vue/devtools-shared-7.7.7.tgz", { "dependencies": { "rfdc": "^1.4.1" } }, "sha1-/xSqjBJi66yMA5fTsJ92fNSJdQw="],
+
+    "@vue/reactivity": ["@vue/reactivity@3.5.19", "http://registry.m.jd.com/@vue/reactivity/download/@vue/reactivity-3.5.19.tgz", { "dependencies": { "@vue/shared": "3.5.19" } }, "sha1-wG8XLaJuL8dAYMxJDRw6r/wCRiI="],
+
+    "@vue/runtime-core": ["@vue/runtime-core@3.5.19", "http://registry.m.jd.com/@vue/runtime-core/download/@vue/runtime-core-3.5.19.tgz", { "dependencies": { "@vue/reactivity": "3.5.19", "@vue/shared": "3.5.19" } }, "sha1-evN1rd2IuL4KOpAWIRK7mPkqk1k="],
+
+    "@vue/runtime-dom": ["@vue/runtime-dom@3.5.19", "http://registry.m.jd.com/@vue/runtime-dom/download/@vue/runtime-dom-3.5.19.tgz", { "dependencies": { "@vue/reactivity": "3.5.19", "@vue/runtime-core": "3.5.19", "@vue/shared": "3.5.19", "csstype": "^3.1.3" } }, "sha1-uMtBAXeKMGvbZLX6ulOakOzOcSw="],
+
+    "@vue/server-renderer": ["@vue/server-renderer@3.5.19", "http://registry.m.jd.com/@vue/server-renderer/download/@vue/server-renderer-3.5.19.tgz", { "dependencies": { "@vue/compiler-ssr": "3.5.19", "@vue/shared": "3.5.19" }, "peerDependencies": { "vue": "3.5.19" } }, "sha1-aCaXAec2QOwLhh/K/1zHczHSRek="],
+
+    "@vue/shared": ["@vue/shared@3.5.19", "http://registry.m.jd.com/@vue/shared/download/@vue/shared-3.5.19.tgz", {}, "sha1-UwGWepEMtiFF5PFxMfO+6ItGPIM="],
+
+    "@vueuse/core": ["@vueuse/core@12.8.2", "http://registry.m.jd.com/@vueuse/core/download/@vueuse/core-12.8.2.tgz", { "dependencies": { "@types/web-bluetooth": "^0.0.21", "@vueuse/metadata": "12.8.2", "@vueuse/shared": "12.8.2", "vue": "^3.5.13" } }, "sha1-AHxt0pp9H2kz6RbnovjvPD+Wjqo="],
+
+    "@vueuse/integrations": ["@vueuse/integrations@12.8.2", "http://registry.m.jd.com/@vueuse/integrations/download/@vueuse/integrations-12.8.2.tgz", { "dependencies": { "@vueuse/core": "12.8.2", "@vueuse/shared": "12.8.2", "vue": "^3.5.13" }, "peerDependencies": { "async-validator": "^4", "axios": "^1", "change-case": "^5", "drauu": "^0.4", "focus-trap": "^7", "fuse.js": "^7", "idb-keyval": "^6", "jwt-decode": "^4", "nprogress": "^0.2", "qrcode": "^1.5", "sortablejs": "^1", "universal-cookie": "^7" } }, "sha1-0E8z2G/phcmifJit3P3p8w8tsd8="],
+
+    "@vueuse/metadata": ["@vueuse/metadata@12.8.2", "http://registry.m.jd.com/@vueuse/metadata/download/@vueuse/metadata-12.8.2.tgz", {}, "sha1-bLOk6Xzc9SgynuvBvac81/ZDGNM="],
+
+    "@vueuse/shared": ["@vueuse/shared@12.8.2", "http://registry.m.jd.com/@vueuse/shared/download/@vueuse/shared-12.8.2.tgz", { "dependencies": { "vue": "^3.5.13" } }, "sha1-ueRhHQYDYpyOFR+YJFnaOU4i+TA="],
+
+    "@xmldom/xmldom": ["@xmldom/xmldom@0.9.8", "http://registry.m.jd.com/@xmldom/xmldom/download/@xmldom/xmldom-0.9.8.tgz", {}, "sha1-FHHoK9/56PIO6LvmDU/6ilFueNg="],
+
+    "acorn": ["acorn@8.15.0", "http://registry.m.jd.com/acorn/download/acorn-8.15.0.tgz", { "bin": { "acorn": "bin/acorn" } }, "sha1-o2CJi8QV7arEbIJB9jg5dbkwuBY="],
+
+    "algoliasearch": ["algoliasearch@5.35.0", "http://registry.m.jd.com/algoliasearch/download/algoliasearch-5.35.0.tgz", { "dependencies": { "@algolia/abtesting": "1.1.0", "@algolia/client-abtesting": "5.35.0", "@algolia/client-analytics": "5.35.0", "@algolia/client-common": "5.35.0", "@algolia/client-insights": "5.35.0", "@algolia/client-personalization": "5.35.0", "@algolia/client-query-suggestions": "5.35.0", "@algolia/client-search": "5.35.0", "@algolia/ingestion": "1.35.0", "@algolia/monitoring": "1.35.0", "@algolia/recommend": "5.35.0", "@algolia/requester-browser-xhr": "5.35.0", "@algolia/requester-fetch": "5.35.0", "@algolia/requester-node-http": "5.35.0" } }, "sha1-zhLR0ofW9KgLmZhWj4Bsktq7pWY="],
+
+    "ansi-colors": ["ansi-colors@4.1.3", "http://registry.m.jd.com/ansi-colors/download/ansi-colors-4.1.3.tgz", {}, "sha1-N2ETQOsiQ+cMxgTK011jJw1IeBs="],
+
+    "ansi-regex": ["ansi-regex@5.0.1", "http://registry.m.jd.com/ansi-regex/download/ansi-regex-5.0.1.tgz", {}, "sha1-CCyyyJyf6GWaMRpTvWpNxTAdswQ="],
+
+    "ansi-styles": ["ansi-styles@4.3.0", "http://registry.m.jd.com/ansi-styles/download/ansi-styles-4.3.0.tgz", { "dependencies": { "color-convert": "^2.0.1" } }, "sha1-7dgDYornHATIWuegkG7a00tkiTc="],
+
+    "async-validator": ["async-validator@4.2.5", "http://registry.m.jd.com/async-validator/download/async-validator-4.2.5.tgz", {}, "sha1-yW6jMypSFpnQr6rO7VEKVGVsYzk="],
+
+    "asynckit": ["asynckit@0.4.0", "http://registry.m.jd.com/asynckit/download/asynckit-0.4.0.tgz", {}, "sha1-x57Zf380y48robyXkLzDZkdLS3k="],
+
+    "axios": ["axios@1.11.0", "http://registry.m.jd.com/axios/download/axios-1.11.0.tgz", { "dependencies": { "follow-redirects": "^1.15.6", "form-data": "^4.0.4", "proxy-from-env": "^1.1.0" } }, "sha1-wuwhnjXkFMAlsglei4KAJ4R4/bY="],
+
+    "balanced-match": ["balanced-match@1.0.2", "http://registry.m.jd.com/balanced-match/download/balanced-match-1.0.2.tgz", {}, "sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4="],
+
+    "birpc": ["birpc@2.5.0", "http://registry.m.jd.com/birpc/download/birpc-2.5.0.tgz", {}, "sha1-OgFOVMF+zroM4Vc41ITqNx2/ZSc="],
+
+    "boolbase": ["boolbase@1.0.0", "http://registry.m.jd.com/boolbase/download/boolbase-1.0.0.tgz", {}, "sha1-aN/1++YMUes3cl6p4+0xDcwed24="],
+
+    "brace-expansion": ["brace-expansion@2.0.2", "http://registry.m.jd.com/brace-expansion/download/brace-expansion-2.0.2.tgz", { "dependencies": { "balanced-match": "^1.0.0" } }, "sha1-VPxTI3phPYVMe9N0Y6rRffhyFOc="],
+
+    "braces": ["braces@3.0.3", "http://registry.m.jd.com/braces/download/braces-3.0.3.tgz", { "dependencies": { "fill-range": "^7.1.1" } }, "sha1-SQMy9AkZRSJy1VqEgK3AxEE1h4k="],
+
+    "buffer-builder": ["buffer-builder@0.2.0", "http://registry.m.jd.com/buffer-builder/download/buffer-builder-0.2.0.tgz", {}, "sha1-MyLNMH2Cltqx9gRhhZOyYaP63o8="],
+
+    "buffer-from": ["buffer-from@1.1.2", "http://registry.m.jd.com/buffer-from/download/buffer-from-1.1.2.tgz", {}, "sha1-KxRqb9cugLT1XSVfNe1Zo6mkG9U="],
+
     "bun-types": ["bun-types@1.2.19", "http://registry.m.jd.com/bun-types/download/bun-types-1.2.19.tgz", { "dependencies": { "@types/node": "*" }, "peerDependencies": { "@types/react": "^19" } }, "sha1-DOzXjtCLrjicyQKuOlYXw5Cw+rY="],
 
+    "call-bind-apply-helpers": ["call-bind-apply-helpers@1.0.2", "http://registry.m.jd.com/call-bind-apply-helpers/download/call-bind-apply-helpers-1.0.2.tgz", { "dependencies": { "es-errors": "^1.3.0", "function-bind": "^1.1.2" } }, "sha1-S1QowiK+mF15w9gmV0edvgtZstY="],
+
+    "camelcase": ["camelcase@5.3.1", "http://registry.m.jd.com/camelcase/download/camelcase-5.3.1.tgz", {}, "sha1-48mzFWnhBoEd8kL3FXJaH0xJQyA="],
+
+    "ccount": ["ccount@2.0.1", "http://registry.m.jd.com/ccount/download/ccount-2.0.1.tgz", {}, "sha1-F6O/gjAuCHDW2kOgExGovAKj7PU="],
+
+    "change-case": ["change-case@5.4.4", "http://registry.m.jd.com/change-case/download/change-case-5.4.4.tgz", {}, "sha1-DVK1B9j7jyBDQ0MjgdGm17/5egI="],
+
+    "character-entities-html4": ["character-entities-html4@2.1.0", "http://registry.m.jd.com/character-entities-html4/download/character-entities-html4-2.1.0.tgz", {}, "sha1-HxrblAyXGksiujndymthjcblays="],
+
+    "character-entities-legacy": ["character-entities-legacy@3.0.0", "http://registry.m.jd.com/character-entities-legacy/download/character-entities-legacy-3.0.0.tgz", {}, "sha1-dryDqQc4kB17wiOp6TdZ/dVgEls="],
+
+    "cheerio": ["cheerio@1.0.0-rc.10", "http://registry.m.jd.com/cheerio/download/cheerio-1.0.0-rc.10.tgz", { "dependencies": { "cheerio-select": "^1.5.0", "dom-serializer": "^1.3.2", "domhandler": "^4.2.0", "htmlparser2": "^6.1.0", "parse5": "^6.0.1", "parse5-htmlparser2-tree-adapter": "^6.0.1", "tslib": "^2.2.0" } }, "sha1-K6Pc38wm55VvwfRA5h1RxkM3nz4="],
+
+    "cheerio-select": ["cheerio-select@1.6.0", "http://registry.m.jd.com/cheerio-select/download/cheerio-select-1.6.0.tgz", { "dependencies": { "css-select": "^4.3.0", "css-what": "^6.0.1", "domelementtype": "^2.2.0", "domhandler": "^4.3.1", "domutils": "^2.8.0" } }, "sha1-SJ82YEESxyKvoUfe3Q1GCcCeFpY="],
+
+    "chokidar": ["chokidar@4.0.3", "http://registry.m.jd.com/chokidar/download/chokidar-4.0.3.tgz", { "dependencies": { "readdirp": "^4.0.1" } }, "sha1-e+N6TAPJruHs/oYqSiOyxwwgXTA="],
+
+    "cliui": ["cliui@6.0.0", "http://registry.m.jd.com/cliui/download/cliui-6.0.0.tgz", { "dependencies": { "string-width": "^4.2.0", "strip-ansi": "^6.0.0", "wrap-ansi": "^6.2.0" } }, "sha1-UR1wLAxOQcoVbX0OlgIfI+EyJbE="],
+
+    "color-convert": ["color-convert@2.0.1", "http://registry.m.jd.com/color-convert/download/color-convert-2.0.1.tgz", { "dependencies": { "color-name": "~1.1.4" } }, "sha1-ctOmjVmMm9s68q0ehPIdiWq9TeM="],
+
+    "color-name": ["color-name@1.1.4", "http://registry.m.jd.com/color-name/download/color-name-1.1.4.tgz", {}, "sha1-wqCah6y95pVD3m9j+jmVyCbFNqI="],
+
+    "colorjs.io": ["colorjs.io@0.5.2", "http://registry.m.jd.com/colorjs.io/download/colorjs.io-0.5.2.tgz", {}, "sha1-Y7IBObAHWR68M1mTK++EYo6z/O8="],
+
+    "combined-stream": ["combined-stream@1.0.8", "http://registry.m.jd.com/combined-stream/download/combined-stream-1.0.8.tgz", { "dependencies": { "delayed-stream": "~1.0.0" } }, "sha1-w9RaizT9cwYxoRCoolIGgrMdWn8="],
+
+    "comma-separated-tokens": ["comma-separated-tokens@2.0.3", "http://registry.m.jd.com/comma-separated-tokens/download/comma-separated-tokens-2.0.3.tgz", {}, "sha1-TonJRYrLYbyP7xn0UplzsjkoOe4="],
+
+    "commander": ["commander@2.20.3", "http://registry.m.jd.com/commander/download/commander-2.20.3.tgz", {}, "sha1-/UhehMA+tIgcIHIrpIA16FMa6zM="],
+
+    "cookie": ["cookie@0.7.2", "http://registry.m.jd.com/cookie/download/cookie-0.7.2.tgz", {}, "sha1-VWNpxHKiupEPKXmJG1JrNDYjftc="],
+
+    "copy-anything": ["copy-anything@2.0.6", "http://registry.m.jd.com/copy-anything/download/copy-anything-2.0.6.tgz", { "dependencies": { "is-what": "^3.14.1" } }, "sha1-CSRU6pWEp7etVXMGKyqH9ZAPxIA="],
+
+    "cross-spawn": ["cross-spawn@7.0.6", "http://registry.m.jd.com/cross-spawn/download/cross-spawn-7.0.6.tgz", { "dependencies": { "path-key": "^3.1.0", "shebang-command": "^2.0.0", "which": "^2.0.1" } }, "sha1-ilj+ePANzXDDcEUXWd+/rwPo7p8="],
+
+    "css-select": ["css-select@4.3.0", "http://registry.m.jd.com/css-select/download/css-select-4.3.0.tgz", { "dependencies": { "boolbase": "^1.0.0", "css-what": "^6.0.1", "domhandler": "^4.3.1", "domutils": "^2.8.0", "nth-check": "^2.0.1" } }, "sha1-23EpsoRmYv2GKM/ElquytZ5BUps="],
+
+    "css-what": ["css-what@6.2.2", "http://registry.m.jd.com/css-what/download/css-what-6.2.2.tgz", {}, "sha1-zcyPm2l3cZ/fvR3nrsJKv3Vrneo="],
+
     "csstype": ["csstype@3.1.3", "http://registry.m.jd.com/csstype/download/csstype-3.1.3.tgz", {}, "sha1-2A/ylNEU+w5qxQD7+FtgE31+/4E="],
+
+    "debug": ["debug@4.4.1", "http://registry.m.jd.com/debug/download/debug-4.4.1.tgz", { "dependencies": { "ms": "^2.1.3" } }, "sha1-5ai8bLxMbNPmQwiwaTo9T6VQGJs="],
+
+    "decamelize": ["decamelize@1.2.0", "http://registry.m.jd.com/decamelize/download/decamelize-1.2.0.tgz", {}, "sha1-9lNNFRSCabIDUue+4m9QH5oZEpA="],
+
+    "delayed-stream": ["delayed-stream@1.0.0", "http://registry.m.jd.com/delayed-stream/download/delayed-stream-1.0.0.tgz", {}, "sha1-3zrhmayt+31ECqrgsp4icrJOxhk="],
+
+    "dequal": ["dequal@2.0.3", "http://registry.m.jd.com/dequal/download/dequal-2.0.3.tgz", {}, "sha1-JkQhTxmX057Q7g7OcjNUkKesZ74="],
+
+    "detect-libc": ["detect-libc@2.0.4", "http://registry.m.jd.com/detect-libc/download/detect-libc-2.0.4.tgz", {}, "sha1-8EcVuLqBXlO02BCWVbZQimhlp+g="],
+
+    "devlop": ["devlop@1.1.0", "http://registry.m.jd.com/devlop/download/devlop-1.1.0.tgz", { "dependencies": { "dequal": "^2.0.0" } }, "sha1-TbfCyk3G4Og0wwvnDJS7yXbccBg="],
+
+    "dijkstrajs": ["dijkstrajs@1.0.3", "http://registry.m.jd.com/dijkstrajs/download/dijkstrajs-1.0.3.tgz", {}, "sha1-TI296h8PZHi/+U2cSceE1iPk/CM="],
+
+    "dom-serializer": ["dom-serializer@1.4.1", "http://registry.m.jd.com/dom-serializer/download/dom-serializer-1.4.1.tgz", { "dependencies": { "domelementtype": "^2.0.1", "domhandler": "^4.2.0", "entities": "^2.0.0" } }, "sha1-3l1Bsa6ikCFdxFptrorc8dMuLTA="],
+
+    "domelementtype": ["domelementtype@2.3.0", "http://registry.m.jd.com/domelementtype/download/domelementtype-2.3.0.tgz", {}, "sha1-XEXo6GmVJiYzHXqrMm0B2vZdWJ0="],
+
+    "domhandler": ["domhandler@4.3.1", "http://registry.m.jd.com/domhandler/download/domhandler-4.3.1.tgz", { "dependencies": { "domelementtype": "^2.2.0" } }, "sha1-jXkgM0FvWdaLwDpap7AYwcqJJ5w="],
+
+    "domutils": ["domutils@2.8.0", "http://registry.m.jd.com/domutils/download/domutils-2.8.0.tgz", { "dependencies": { "dom-serializer": "^1.0.1", "domelementtype": "^2.2.0", "domhandler": "^4.2.0" } }, "sha1-RDfe9dtuLR9dbuhZvZXKfQIEgTU="],
+
+    "drauu": ["drauu@0.4.3", "http://registry.m.jd.com/drauu/download/drauu-0.4.3.tgz", { "dependencies": { "@drauu/core": "0.4.3" } }, "sha1-aD6OC7V6crzga57j/B2vKNTpmTE="],
+
+    "dunder-proto": ["dunder-proto@1.0.1", "http://registry.m.jd.com/dunder-proto/download/dunder-proto-1.0.1.tgz", { "dependencies": { "call-bind-apply-helpers": "^1.0.1", "es-errors": "^1.3.0", "gopd": "^1.2.0" } }, "sha1-165mfh3INIL4tw/Q9u78UNow9Yo="],
+
+    "eastasianwidth": ["eastasianwidth@0.2.0", "http://registry.m.jd.com/eastasianwidth/download/eastasianwidth-0.2.0.tgz", {}, "sha1-aWzi7Aqg5uqTo5f/zySqeEDIJ8s="],
+
+    "emoji-regex": ["emoji-regex@8.0.0", "http://registry.m.jd.com/emoji-regex/download/emoji-regex-8.0.0.tgz", {}, "sha1-6Bj9ac5cz8tARZT4QpY79TFkzDc="],
+
+    "emoji-regex-xs": ["emoji-regex-xs@1.0.0", "http://registry.m.jd.com/emoji-regex-xs/download/emoji-regex-xs-1.0.0.tgz", {}, "sha1-6K8i5dnb1/fyLSgK89GdKqtbByQ="],
+
+    "encoding": ["encoding@0.1.13", "http://registry.m.jd.com/encoding/download/encoding-0.1.13.tgz", { "dependencies": { "iconv-lite": "^0.6.2" } }, "sha1-VldK/deR9UqOmyeFwFgqLSYhD6k="],
+
+    "entities": ["entities@4.5.0", "http://registry.m.jd.com/entities/download/entities-4.5.0.tgz", {}, "sha1-XSaOpecRPsdMTQM7eepaNaSI+0g="],
+
+    "errno": ["errno@0.1.8", "http://registry.m.jd.com/errno/download/errno-0.1.8.tgz", { "dependencies": { "prr": "~1.0.1" }, "bin": { "errno": "cli.js" } }, "sha1-i7Ppx9Rjvkl2/4iPdrSAnrwugR8="],
+
+    "es-define-property": ["es-define-property@1.0.1", "http://registry.m.jd.com/es-define-property/download/es-define-property-1.0.1.tgz", {}, "sha1-mD6y+aZyTpMD9hrd8BHHLgngsPo="],
+
+    "es-errors": ["es-errors@1.3.0", "http://registry.m.jd.com/es-errors/download/es-errors-1.3.0.tgz", {}, "sha1-BfdaJdq5jk+x3NXhRywFRtUFfI8="],
+
+    "es-object-atoms": ["es-object-atoms@1.1.1", "http://registry.m.jd.com/es-object-atoms/download/es-object-atoms-1.1.1.tgz", { "dependencies": { "es-errors": "^1.3.0" } }, "sha1-HE8sSDcydZfOadLKGQp/3RcjOME="],
+
+    "es-set-tostringtag": ["es-set-tostringtag@2.1.0", "http://registry.m.jd.com/es-set-tostringtag/download/es-set-tostringtag-2.1.0.tgz", { "dependencies": { "es-errors": "^1.3.0", "get-intrinsic": "^1.2.6", "has-tostringtag": "^1.0.2", "hasown": "^2.0.2" } }, "sha1-8x274MGDsAptJutjJcgQwP0YvU0="],
+
+    "esbuild": ["esbuild@0.21.5", "http://registry.m.jd.com/esbuild/download/esbuild-0.21.5.tgz", { "optionalDependencies": { "@esbuild/aix-ppc64": "0.21.5", "@esbuild/android-arm": "0.21.5", "@esbuild/android-arm64": "0.21.5", "@esbuild/android-x64": "0.21.5", "@esbuild/darwin-arm64": "0.21.5", "@esbuild/darwin-x64": "0.21.5", "@esbuild/freebsd-arm64": "0.21.5", "@esbuild/freebsd-x64": "0.21.5", "@esbuild/linux-arm": "0.21.5", "@esbuild/linux-arm64": "0.21.5", "@esbuild/linux-ia32": "0.21.5", "@esbuild/linux-loong64": "0.21.5", "@esbuild/linux-mips64el": "0.21.5", "@esbuild/linux-ppc64": "0.21.5", "@esbuild/linux-riscv64": "0.21.5", "@esbuild/linux-s390x": "0.21.5", "@esbuild/linux-x64": "0.21.5", "@esbuild/netbsd-x64": "0.21.5", "@esbuild/openbsd-x64": "0.21.5", "@esbuild/sunos-x64": "0.21.5", "@esbuild/win32-arm64": "0.21.5", "@esbuild/win32-ia32": "0.21.5", "@esbuild/win32-x64": "0.21.5" }, "bin": { "esbuild": "bin/esbuild" } }, "sha1-nKMBsSCSKVm3ZjYNisgw2g0CmX0="],
+
+    "escape-goat": ["escape-goat@3.0.0", "http://registry.m.jd.com/escape-goat/download/escape-goat-3.0.0.tgz", {}, "sha1-6LX7ZYVT/oo8SVnDFsbruMhCsZw="],
+
+    "esm": ["esm@3.2.25", "http://registry.m.jd.com/esm/download/esm-3.2.25.tgz", {}, "sha1-NCwYwp1WFXaIulzjH4Qx+7eVzBA="],
+
+    "estree-walker": ["estree-walker@2.0.2", "http://registry.m.jd.com/estree-walker/download/estree-walker-2.0.2.tgz", {}, "sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw="],
+
+    "fill-range": ["fill-range@7.1.1", "http://registry.m.jd.com/fill-range/download/fill-range-7.1.1.tgz", { "dependencies": { "to-regex-range": "^5.0.1" } }, "sha1-RCZdPKwH4+p9wkdRY4BkN1SgUpI="],
+
+    "find-up": ["find-up@4.1.0", "http://registry.m.jd.com/find-up/download/find-up-4.1.0.tgz", { "dependencies": { "locate-path": "^5.0.0", "path-exists": "^4.0.0" } }, "sha1-l6/n1s3AvFkoWEt8jXsW6KmqXRk="],
+
+    "focus-trap": ["focus-trap@7.6.5", "http://registry.m.jd.com/focus-trap/download/focus-trap-7.6.5.tgz", { "dependencies": { "tabbable": "^6.2.0" } }, "sha1-VvCBQobUPBomiOm8TzHxeuBH+3Y="],
+
+    "follow-redirects": ["follow-redirects@1.15.11", "http://registry.m.jd.com/follow-redirects/download/follow-redirects-1.15.11.tgz", {}, "sha1-d31z1yqS+OxNLkEOtHNSpWuOg0A="],
+
+    "foreground-child": ["foreground-child@3.3.1", "http://registry.m.jd.com/foreground-child/download/foreground-child-3.3.1.tgz", { "dependencies": { "cross-spawn": "^7.0.6", "signal-exit": "^4.0.1" } }, "sha1-Mujp7Rtoo0l777msK2rfkqY4V28="],
+
+    "form-data": ["form-data@4.0.4", "http://registry.m.jd.com/form-data/download/form-data-4.0.4.tgz", { "dependencies": { "asynckit": "^0.4.0", "combined-stream": "^1.0.8", "es-set-tostringtag": "^2.1.0", "hasown": "^2.0.2", "mime-types": "^2.1.12" } }, "sha1-eEzczgZpqdaOlNEaxO6pgIjt0sQ="],
+
+    "fsevents": ["fsevents@2.3.3", "http://registry.m.jd.com/fsevents/download/fsevents-2.3.3.tgz", {}, "sha1-ysZAd4XQNnWipeGlMFxpezR9kNY="],
+
+    "function-bind": ["function-bind@1.1.2", "http://registry.m.jd.com/function-bind/download/function-bind-1.1.2.tgz", {}, "sha1-LALYZNl/PqbIgwxGTL0Rq26rehw="],
+
+    "fuse.js": ["fuse.js@7.1.0", "http://registry.m.jd.com/fuse.js/download/fuse.js-7.1.0.tgz", {}, "sha1-MGIotL7+7hHgWwJwh8J0QVhSfQk="],
+
+    "get-caller-file": ["get-caller-file@2.0.5", "http://registry.m.jd.com/get-caller-file/download/get-caller-file-2.0.5.tgz", {}, "sha1-T5RBKoLbMvNuOwuXQfipf+sDH34="],
+
+    "get-intrinsic": ["get-intrinsic@1.3.0", "http://registry.m.jd.com/get-intrinsic/download/get-intrinsic-1.3.0.tgz", { "dependencies": { "call-bind-apply-helpers": "^1.0.2", "es-define-property": "^1.0.1", "es-errors": "^1.3.0", "es-object-atoms": "^1.1.1", "function-bind": "^1.1.2", "get-proto": "^1.0.1", "gopd": "^1.2.0", "has-symbols": "^1.1.0", "hasown": "^2.0.2", "math-intrinsics": "^1.1.0" } }, "sha1-dD8OO2lkqTpUke0b/6rgVNf5jQE="],
+
+    "get-proto": ["get-proto@1.0.1", "http://registry.m.jd.com/get-proto/download/get-proto-1.0.1.tgz", { "dependencies": { "dunder-proto": "^1.0.1", "es-object-atoms": "^1.0.0" } }, "sha1-FQs/J0OGnvPoUewMSdFbHRTQDuE="],
+
+    "glob": ["glob@10.4.5", "http://registry.m.jd.com/glob/download/glob-10.4.5.tgz", { "dependencies": { "foreground-child": "^3.1.0", "jackspeak": "^3.1.2", "minimatch": "^9.0.4", "minipass": "^7.1.2", "package-json-from-dist": "^1.0.0", "path-scurry": "^1.11.1" }, "bin": { "glob": "dist/esm/bin.mjs" } }, "sha1-9NnwuQ/9urCcnXf18ptCYlF7CVY="],
+
+    "gopd": ["gopd@1.2.0", "http://registry.m.jd.com/gopd/download/gopd-1.2.0.tgz", {}, "sha1-ifVrghe9vIgCvSmd9tfxCB1+UaE="],
+
+    "graceful-fs": ["graceful-fs@4.2.11", "http://registry.m.jd.com/graceful-fs/download/graceful-fs-4.2.11.tgz", {}, "sha1-QYPk6L8Iu24Fu7L30uDI9xLKQOM="],
+
+    "has-flag": ["has-flag@4.0.0", "http://registry.m.jd.com/has-flag/download/has-flag-4.0.0.tgz", {}, "sha1-lEdx/ZyByBJlxNaUGGDaBrtZR5s="],
+
+    "has-symbols": ["has-symbols@1.1.0", "http://registry.m.jd.com/has-symbols/download/has-symbols-1.1.0.tgz", {}, "sha1-/JxqeDoISVHQuXH+EBjegTcHozg="],
+
+    "has-tostringtag": ["has-tostringtag@1.0.2", "http://registry.m.jd.com/has-tostringtag/download/has-tostringtag-1.0.2.tgz", { "dependencies": { "has-symbols": "^1.0.3" } }, "sha1-LNxC1AvvLltO6rfAGnPFTOerWrw="],
+
+    "hasown": ["hasown@2.0.2", "http://registry.m.jd.com/hasown/download/hasown-2.0.2.tgz", { "dependencies": { "function-bind": "^1.1.2" } }, "sha1-AD6vkb563DcuhOxZ3DclLO24AAM="],
+
+    "hast-util-to-html": ["hast-util-to-html@9.0.5", "http://registry.m.jd.com/hast-util-to-html/download/hast-util-to-html-9.0.5.tgz", { "dependencies": { "@types/hast": "^3.0.0", "@types/unist": "^3.0.0", "ccount": "^2.0.0", "comma-separated-tokens": "^2.0.0", "hast-util-whitespace": "^3.0.0", "html-void-elements": "^3.0.0", "mdast-util-to-hast": "^13.0.0", "property-information": "^7.0.0", "space-separated-tokens": "^2.0.0", "stringify-entities": "^4.0.0", "zwitch": "^2.0.4" } }, "sha1-zMZzpVu46Fd1sIrCg4D3LUcWcAU="],
+
+    "hast-util-whitespace": ["hast-util-whitespace@3.0.0", "http://registry.m.jd.com/hast-util-whitespace/download/hast-util-whitespace-3.0.0.tgz", { "dependencies": { "@types/hast": "^3.0.0" } }, "sha1-d3jtnTyS3Z6MXI9kiknCH8UctiE="],
+
+    "hookable": ["hookable@5.5.3", "http://registry.m.jd.com/hookable/download/hookable-5.5.3.tgz", {}, "sha1-bPw1iYSh75keJRjLntSneLvTIV0="],
+
+    "html-void-elements": ["html-void-elements@3.0.0", "http://registry.m.jd.com/html-void-elements/download/html-void-elements-3.0.0.tgz", {}, "sha1-/J29hK+edHJJA01NYmAt72UX8dc="],
+
+    "htmlparser2": ["htmlparser2@6.1.0", "http://registry.m.jd.com/htmlparser2/download/htmlparser2-6.1.0.tgz", { "dependencies": { "domelementtype": "^2.0.1", "domhandler": "^4.0.0", "domutils": "^2.5.2", "entities": "^2.0.0" } }, "sha1-xNditsM3GgXb5l6UrkOp+EX7j7c="],
+
+    "iconv-lite": ["iconv-lite@0.6.3", "http://registry.m.jd.com/iconv-lite/download/iconv-lite-0.6.3.tgz", { "dependencies": { "safer-buffer": ">= 2.1.2 < 3.0.0" } }, "sha1-pS+AvzjaGVLrXGgXkHGYcaGnJQE="],
+
+    "idb-keyval": ["idb-keyval@6.2.2", "http://registry.m.jd.com/idb-keyval/download/idb-keyval-6.2.2.tgz", {}, "sha1-sBcbX3OUSFSjKRpc26jhJ2jEhUo="],
+
+    "image-size": ["image-size@0.5.5", "http://registry.m.jd.com/image-size/download/image-size-0.5.5.tgz", { "bin": { "image-size": "bin/image-size.js" } }, "sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w="],
+
+    "immutable": ["immutable@5.1.3", "http://registry.m.jd.com/immutable/download/immutable-5.1.3.tgz", {}, "sha1-5khmlMi3bDfAY8ypI5n6ZAmGNNQ="],
+
+    "is-extglob": ["is-extglob@2.1.1", "http://registry.m.jd.com/is-extglob/download/is-extglob-2.1.1.tgz", {}, "sha1-qIwCU1eR8C7TfHahueqXc8gz+MI="],
+
+    "is-fullwidth-code-point": ["is-fullwidth-code-point@3.0.0", "http://registry.m.jd.com/is-fullwidth-code-point/download/is-fullwidth-code-point-3.0.0.tgz", {}, "sha1-8Rb4Bk/pCz94RKOJl8C3UFEmnx0="],
+
+    "is-glob": ["is-glob@4.0.3", "http://registry.m.jd.com/is-glob/download/is-glob-4.0.3.tgz", { "dependencies": { "is-extglob": "^2.1.1" } }, "sha1-ZPYeQsu7LuwgcanawLKLoeZdUIQ="],
+
+    "is-number": ["is-number@7.0.0", "http://registry.m.jd.com/is-number/download/is-number-7.0.0.tgz", {}, "sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss="],
+
+    "is-what": ["is-what@3.14.1", "http://registry.m.jd.com/is-what/download/is-what-3.14.1.tgz", {}, "sha1-4SIvRt3ahd6tD9HJ3xMXYOd3VcE="],
+
+    "isexe": ["isexe@2.0.0", "http://registry.m.jd.com/isexe/download/isexe-2.0.0.tgz", {}, "sha1-6PvzdNxVb/iUehDcsFctYz8s+hA="],
+
+    "jackspeak": ["jackspeak@3.4.3", "http://registry.m.jd.com/jackspeak/download/jackspeak-3.4.3.tgz", { "dependencies": { "@isaacs/cliui": "^8.0.2" }, "optionalDependencies": { "@pkgjs/parseargs": "^0.11.0" } }, "sha1-iDOp2Jq0rN5hiJQr0cU7Y5DtWoo="],
+
+    "js-tokens": ["js-tokens@4.0.0", "http://registry.m.jd.com/js-tokens/download/js-tokens-4.0.0.tgz", {}, "sha1-GSA/tZmR35jjoocFDUZHzerzJJk="],
+
+    "juice": ["juice@8.1.0", "http://registry.m.jd.com/juice/download/juice-8.1.0.tgz", { "dependencies": { "cheerio": "1.0.0-rc.10", "commander": "^6.1.0", "mensch": "^0.3.4", "slick": "^1.12.2", "web-resource-inliner": "^6.0.1" }, "bin": { "juice": "bin/juice" } }, "sha1-TqIzYlIv4GQYIplDI37jdRpPynA="],
+
+    "jwt-decode": ["jwt-decode@4.0.0", "http://registry.m.jd.com/jwt-decode/download/jwt-decode-4.0.0.tgz", {}, "sha1-InA1JCX9QTeFsvrxH251XFFRvUs="],
+
+    "less": ["less@4.4.1", "http://registry.m.jd.com/less/download/less-4.4.1.tgz", { "dependencies": { "copy-anything": "^2.0.1", "parse-node-version": "^1.0.1", "tslib": "^2.3.0" }, "optionalDependencies": { "errno": "^0.1.1", "graceful-fs": "^4.1.2", "image-size": "~0.5.0", "make-dir": "^2.1.0", "mime": "^1.4.1", "needle": "^3.1.0", "source-map": "~0.6.0" }, "bin": { "lessc": "bin/lessc" } }, "sha1-L5cWi/iHymqZV+5p4WzDT4sAfMc="],
+
+    "lightningcss": ["lightningcss@1.30.1", "http://registry.m.jd.com/lightningcss/download/lightningcss-1.30.1.tgz", { "dependencies": { "detect-libc": "^2.0.3" }, "optionalDependencies": { "lightningcss-darwin-arm64": "1.30.1", "lightningcss-darwin-x64": "1.30.1", "lightningcss-freebsd-x64": "1.30.1", "lightningcss-linux-arm-gnueabihf": "1.30.1", "lightningcss-linux-arm64-gnu": "1.30.1", "lightningcss-linux-arm64-musl": "1.30.1", "lightningcss-linux-x64-gnu": "1.30.1", "lightningcss-linux-x64-musl": "1.30.1", "lightningcss-win32-arm64-msvc": "1.30.1", "lightningcss-win32-x64-msvc": "1.30.1" } }, "sha1-eOl5wtWVv8uQ0qjA62Mv5sW/7V0="],
+
+    "lightningcss-darwin-arm64": ["lightningcss-darwin-arm64@1.30.1", "http://registry.m.jd.com/lightningcss-darwin-arm64/download/lightningcss-darwin-arm64-1.30.1.tgz", {}, "sha1-PUfOXiIblWfHA5UO3yUpyko3AK4="],
+
+    "lightningcss-darwin-x64": ["lightningcss-darwin-x64@1.30.1", "http://registry.m.jd.com/lightningcss-darwin-x64/download/lightningcss-darwin-x64-1.30.1.tgz", {}, "sha1-6BEF0/1jMIYMFf6GD2TTnP9fvSI="],
+
+    "lightningcss-freebsd-x64": ["lightningcss-freebsd-x64@1.30.1", "http://registry.m.jd.com/lightningcss-freebsd-x64/download/lightningcss-freebsd-x64-1.30.1.tgz", {}, "sha1-oOcyAxCD/51iXF2wIdCesIWvi+Q="],
+
+    "lightningcss-linux-arm-gnueabihf": ["lightningcss-linux-arm-gnueabihf@1.30.1", "http://registry.m.jd.com/lightningcss-linux-arm-gnueabihf/download/lightningcss-linux-arm-gnueabihf-1.30.1.tgz", {}, "sha1-H17MpglVKN22SfkwS6JWDHJHSQg="],
+
+    "lightningcss-linux-arm64-gnu": ["lightningcss-linux-arm64-gnu@1.30.1", "http://registry.m.jd.com/lightningcss-linux-arm64-gnu/download/lightningcss-linux-arm64-gnu-1.30.1.tgz", {}, "sha1-7ud5lyYQO///HoiZPfcm9pEewAk="],
+
+    "lightningcss-linux-arm64-musl": ["lightningcss-linux-arm64-musl@1.30.1", "http://registry.m.jd.com/lightningcss-linux-arm64-musl/download/lightningcss-linux-arm64-musl-1.30.1.tgz", {}, "sha1-8uS1P0KJL+7vj2IMu4iffAZKff4="],
+
+    "lightningcss-linux-x64-gnu": ["lightningcss-linux-x64-gnu@1.30.1", "http://registry.m.jd.com/lightningcss-linux-x64-gnu/download/lightningcss-linux-x64-gnu-1.30.1.tgz", {}, "sha1-L8cJYiS8AA67l+6pSuokjFsOsVc="],
+
+    "lightningcss-linux-x64-musl": ["lightningcss-linux-x64-musl@1.30.1", "http://registry.m.jd.com/lightningcss-linux-x64-musl/download/lightningcss-linux-x64-musl-1.30.1.tgz", {}, "sha1-ZtyisVn9gZ6oMsRIldB+WzHXXyY="],
+
+    "lightningcss-win32-arm64-msvc": ["lightningcss-win32-arm64-msvc@1.30.1", "http://registry.m.jd.com/lightningcss-win32-arm64-msvc/download/lightningcss-win32-arm64-msvc-1.30.1.tgz", {}, "sha1-fYEQoZ18LSK/3y8ruL5o59G2kDk="],
+
+    "lightningcss-win32-x64-msvc": ["lightningcss-win32-x64-msvc@1.30.1", "http://registry.m.jd.com/lightningcss-win32-x64-msvc/download/lightningcss-win32-x64-msvc-1.30.1.tgz", {}, "sha1-/X3QCOqYSUuF0ktL6gFnk/Lg41I="],
+
+    "locate-path": ["locate-path@5.0.0", "http://registry.m.jd.com/locate-path/download/locate-path-5.0.0.tgz", { "dependencies": { "p-locate": "^4.1.0" } }, "sha1-Gvujlq/WdqbUJQTQpno6frn2KqA="],
+
+    "loose-envify": ["loose-envify@1.4.0", "http://registry.m.jd.com/loose-envify/download/loose-envify-1.4.0.tgz", { "dependencies": { "js-tokens": "^3.0.0 || ^4.0.0" }, "bin": { "loose-envify": "cli.js" } }, "sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8="],
+
+    "lru-cache": ["lru-cache@10.4.3", "http://registry.m.jd.com/lru-cache/download/lru-cache-10.4.3.tgz", {}, "sha1-QQ/IoXtw5ZgBPfJXwkRrfzOD8Rk="],
+
+    "magic-string": ["magic-string@0.30.18", "http://registry.m.jd.com/magic-string/download/magic-string-0.30.18.tgz", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.5" } }, "sha1-kFv7vGqlaScDqT2yap7cqgAH0rs="],
+
+    "make-dir": ["make-dir@2.1.0", "http://registry.m.jd.com/make-dir/download/make-dir-2.1.0.tgz", { "dependencies": { "pify": "^4.0.1", "semver": "^5.6.0" } }, "sha1-XwMQ4YuL6JjMBwCSlaMK5B6R5vU="],
+
+    "mark.js": ["mark.js@8.11.1", "http://registry.m.jd.com/mark.js/download/mark.js-8.11.1.tgz", {}, "sha1-GA8fnr74sOY45BZq1S24eb6y/8U="],
+
+    "markdown-it-mathjax3": ["markdown-it-mathjax3@4.3.2", "http://registry.m.jd.com/markdown-it-mathjax3/download/markdown-it-mathjax3-4.3.2.tgz", { "dependencies": { "juice": "^8.0.0", "mathjax-full": "^3.2.0" } }, "sha1-HjSqhvhWCyg/0oMAgzStwtawWjc="],
+
+    "math-intrinsics": ["math-intrinsics@1.1.0", "http://registry.m.jd.com/math-intrinsics/download/math-intrinsics-1.1.0.tgz", {}, "sha1-oN10voHiqlwvJ+Zc4oNgXuTit/k="],
+
+    "mathjax-full": ["mathjax-full@3.2.2", "http://registry.m.jd.com/mathjax-full/download/mathjax-full-3.2.2.tgz", { "dependencies": { "esm": "^3.2.25", "mhchemparser": "^4.1.0", "mj-context-menu": "^0.6.1", "speech-rule-engine": "^4.0.6" } }, "sha1-Q/AuVSGds5MDCYXStlN86ugvH6c="],
+
+    "mdast-util-to-hast": ["mdast-util-to-hast@13.2.0", "http://registry.m.jd.com/mdast-util-to-hast/download/mdast-util-to-hast-13.2.0.tgz", { "dependencies": { "@types/hast": "^3.0.0", "@types/mdast": "^4.0.0", "@ungap/structured-clone": "^1.0.0", "devlop": "^1.0.0", "micromark-util-sanitize-uri": "^2.0.0", "trim-lines": "^3.0.0", "unist-util-position": "^5.0.0", "unist-util-visit": "^5.0.0", "vfile": "^6.0.0" } }, "sha1-XKWOW5IcwKPe0bwC7teaT+T+QfQ="],
+
+    "mensch": ["mensch@0.3.4", "http://registry.m.jd.com/mensch/download/mensch-0.3.4.tgz", {}, "sha1-dw+RtGyxbqWyBO5zV2jD8MSR/s0="],
+
+    "mhchemparser": ["mhchemparser@4.2.1", "http://registry.m.jd.com/mhchemparser/download/mhchemparser-4.2.1.tgz", {}, "sha1-1zmC5mvAYXCoWxmFYA7p2r4VfLA="],
+
+    "micromark-util-character": ["micromark-util-character@2.1.1", "http://registry.m.jd.com/micromark-util-character/download/micromark-util-character-2.1.1.tgz", { "dependencies": { "micromark-util-symbol": "^2.0.0", "micromark-util-types": "^2.0.0" } }, "sha1-L5h4MaQNTFEKwmHomFLE6XA8zaY="],
+
+    "micromark-util-encode": ["micromark-util-encode@2.0.1", "http://registry.m.jd.com/micromark-util-encode/download/micromark-util-encode-2.0.1.tgz", {}, "sha1-DVHRwJVVHPqsNoMmljz1XxX1QLg="],
+
+    "micromark-util-sanitize-uri": ["micromark-util-sanitize-uri@2.0.1", "http://registry.m.jd.com/micromark-util-sanitize-uri/download/micromark-util-sanitize-uri-2.0.1.tgz", { "dependencies": { "micromark-util-character": "^2.0.0", "micromark-util-encode": "^2.0.0", "micromark-util-symbol": "^2.0.0" } }, "sha1-q4l4m4GKWHUrc9a1UjhiG3+qj9c="],
+
+    "micromark-util-symbol": ["micromark-util-symbol@2.0.1", "http://registry.m.jd.com/micromark-util-symbol/download/micromark-util-symbol-2.0.1.tgz", {}, "sha1-5dpJTo6ysHGg0I+zT2zv7GwKGbg="],
+
+    "micromark-util-types": ["micromark-util-types@2.0.2", "http://registry.m.jd.com/micromark-util-types/download/micromark-util-types-2.0.2.tgz", {}, "sha1-8AIl9fWg68MlT5bDa2YFxLOTkI4="],
+
+    "micromatch": ["micromatch@4.0.8", "http://registry.m.jd.com/micromatch/download/micromatch-4.0.8.tgz", { "dependencies": { "braces": "^3.0.3", "picomatch": "^2.3.1" } }, "sha1-1m+hjzpHB2eJMgubGvMr2G2fogI="],
+
+    "mime": ["mime@1.6.0", "http://registry.m.jd.com/mime/download/mime-1.6.0.tgz", { "bin": { "mime": "cli.js" } }, "sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE="],
+
+    "mime-db": ["mime-db@1.52.0", "http://registry.m.jd.com/mime-db/download/mime-db-1.52.0.tgz", {}, "sha1-u6vNwChZ9JhzAchW4zh85exDv3A="],
+
+    "mime-types": ["mime-types@2.1.35", "http://registry.m.jd.com/mime-types/download/mime-types-2.1.35.tgz", { "dependencies": { "mime-db": "1.52.0" } }, "sha1-OBqHG2KnNEUGYK497uRIE/cNlZo="],
+
+    "minimatch": ["minimatch@9.0.5", "http://registry.m.jd.com/minimatch/download/minimatch-9.0.5.tgz", { "dependencies": { "brace-expansion": "^2.0.1" } }, "sha1-10+d1rV9g9jpjPuCEzsDl4vJKeU="],
+
+    "minipass": ["minipass@7.1.2", "http://registry.m.jd.com/minipass/download/minipass-7.1.2.tgz", {}, "sha1-k6libOXl5mvU24aEnnUV6SNApwc="],
+
+    "minisearch": ["minisearch@7.1.2", "http://registry.m.jd.com/minisearch/download/minisearch-7.1.2.tgz", {}, "sha1-KW7o0ZBsw3j35Xo6cfB+UgWnXfU="],
+
+    "mitt": ["mitt@3.0.1", "http://registry.m.jd.com/mitt/download/mitt-3.0.1.tgz", {}, "sha1-6jbPDMMEA2Aa4HTI93twks2rNtE="],
+
+    "mj-context-menu": ["mj-context-menu@0.6.1", "http://registry.m.jd.com/mj-context-menu/download/mj-context-menu-0.6.1.tgz", {}, "sha1-oEPFKCv34c84Id4HsTUlym+Fqmk="],
+
+    "ms": ["ms@2.1.3", "http://registry.m.jd.com/ms/download/ms-2.1.3.tgz", {}, "sha1-V0yBOM4dK1hh8LRFedut1gxmFbI="],
+
+    "nanoid": ["nanoid@3.3.11", "http://registry.m.jd.com/nanoid/download/nanoid-3.3.11.tgz", { "bin": { "nanoid": "bin/nanoid.cjs" } }, "sha1-T08RLO++MDIC8hmYOBKJNiZtGFs="],
+
+    "needle": ["needle@3.3.1", "http://registry.m.jd.com/needle/download/needle-3.3.1.tgz", { "dependencies": { "iconv-lite": "^0.6.3", "sax": "^1.2.4" }, "bin": { "needle": "bin/needle" } }, "sha1-Y/da7FgMLnfiCfPzJOLN89Kb0Ek="],
+
+    "node-addon-api": ["node-addon-api@7.1.1", "http://registry.m.jd.com/node-addon-api/download/node-addon-api-7.1.1.tgz", {}, "sha1-Grpmk7DyVSWKBJ1iEykykyKq1Vg="],
+
+    "node-fetch": ["node-fetch@2.7.0", "http://registry.m.jd.com/node-fetch/download/node-fetch-2.7.0.tgz", { "dependencies": { "whatwg-url": "^5.0.0" }, "peerDependencies": { "encoding": "^0.1.0" } }, "sha1-0PD6bj4twdJ+/NitmdVQvalNGH0="],
+
+    "nprogress": ["nprogress@0.2.0", "http://registry.m.jd.com/nprogress/download/nprogress-0.2.0.tgz", {}, "sha1-y480xTIT2JVyP8urkH6UIq28r7E="],
+
+    "nth-check": ["nth-check@2.1.1", "http://registry.m.jd.com/nth-check/download/nth-check-2.1.1.tgz", { "dependencies": { "boolbase": "^1.0.0" } }, "sha1-yeq0KO/842zWuSySS9sADvHx7R0="],
+
+    "oniguruma-to-es": ["oniguruma-to-es@3.1.1", "http://registry.m.jd.com/oniguruma-to-es/download/oniguruma-to-es-3.1.1.tgz", { "dependencies": { "emoji-regex-xs": "^1.0.0", "regex": "^6.0.1", "regex-recursion": "^6.0.2" } }, "sha1-SA5LrE07yUOawNISTwcl56DXbRc="],
+
+    "p-limit": ["p-limit@2.3.0", "http://registry.m.jd.com/p-limit/download/p-limit-2.3.0.tgz", { "dependencies": { "p-try": "^2.0.0" } }, "sha1-PdM8ZHohT9//2DWTPrCG2g3CHbE="],
+
+    "p-locate": ["p-locate@4.1.0", "http://registry.m.jd.com/p-locate/download/p-locate-4.1.0.tgz", { "dependencies": { "p-limit": "^2.2.0" } }, "sha1-o0KLtwiLOmApL2aRkni3wpetTwc="],
+
+    "p-try": ["p-try@2.2.0", "http://registry.m.jd.com/p-try/download/p-try-2.2.0.tgz", {}, "sha1-yyhoVA4xPWHeWPr741zpAE1VQOY="],
+
+    "package-json-from-dist": ["package-json-from-dist@1.0.1", "http://registry.m.jd.com/package-json-from-dist/download/package-json-from-dist-1.0.1.tgz", {}, "sha1-TxRxoBCCeob5TP2bByfjbSZ95QU="],
+
+    "parse-node-version": ["parse-node-version@1.0.1", "http://registry.m.jd.com/parse-node-version/download/parse-node-version-1.0.1.tgz", {}, "sha1-4rXb7eAOf6m8NjYH9TMn6LBzGJs="],
+
+    "parse5": ["parse5@6.0.1", "http://registry.m.jd.com/parse5/download/parse5-6.0.1.tgz", {}, "sha1-4aHAhcVps9wIMhGE8Zo5zCf3wws="],
+
+    "parse5-htmlparser2-tree-adapter": ["parse5-htmlparser2-tree-adapter@6.0.1", "http://registry.m.jd.com/parse5-htmlparser2-tree-adapter/download/parse5-htmlparser2-tree-adapter-6.0.1.tgz", { "dependencies": { "parse5": "^6.0.1" } }, "sha1-LN+a2CMyEUA3DU2/XT6Sx8jdxuY="],
+
+    "path-exists": ["path-exists@4.0.0", "http://registry.m.jd.com/path-exists/download/path-exists-4.0.0.tgz", {}, "sha1-UTvb4tO5XXdi6METfvoZXGxhtbM="],
+
+    "path-key": ["path-key@3.1.1", "http://registry.m.jd.com/path-key/download/path-key-3.1.1.tgz", {}, "sha1-WB9q3mWMu6ZaDTOA3ndTKVBU83U="],
+
+    "path-scurry": ["path-scurry@1.11.1", "http://registry.m.jd.com/path-scurry/download/path-scurry-1.11.1.tgz", { "dependencies": { "lru-cache": "^10.2.0", "minipass": "^5.0.0 || ^6.0.2 || ^7.0.0" } }, "sha1-eWCmaIiFlKByCxKpEdGnQqufEdI="],
+
+    "perfect-debounce": ["perfect-debounce@1.0.0", "http://registry.m.jd.com/perfect-debounce/download/perfect-debounce-1.0.0.tgz", {}, "sha1-nC6LwwsWnMmEpYt9WygEmDlZHSo="],
+
+    "picocolors": ["picocolors@1.1.1", "http://registry.m.jd.com/picocolors/download/picocolors-1.1.1.tgz", {}, "sha1-PTIa8+q5ObCDyPkpodEs2oHCa2s="],
+
+    "picomatch": ["picomatch@2.3.1", "http://registry.m.jd.com/picomatch/download/picomatch-2.3.1.tgz", {}, "sha1-O6ODNzNkbZ0+SZWUbBNlpn+wekI="],
+
+    "pify": ["pify@4.0.1", "http://registry.m.jd.com/pify/download/pify-4.0.1.tgz", {}, "sha1-SyzSXFDVmHNcUCkiJP2MbfQeMjE="],
+
+    "pngjs": ["pngjs@5.0.0", "http://registry.m.jd.com/pngjs/download/pngjs-5.0.0.tgz", {}, "sha1-553SshV2f9nARWHAEjbflgvOf7s="],
+
+    "postcss": ["postcss@8.5.6", "http://registry.m.jd.com/postcss/download/postcss-8.5.6.tgz", { "dependencies": { "nanoid": "^3.3.11", "picocolors": "^1.1.1", "source-map-js": "^1.2.1" } }, "sha1-KCUAZhWmGbT2Kp50JswSCzSajzw="],
+
+    "preact": ["preact@10.27.0", "http://registry.m.jd.com/preact/download/preact-10.27.0.tgz", {}, "sha1-fmFPtlHMH0knW/t2gugR11mlNk8="],
+
+    "property-information": ["property-information@7.1.0", "http://registry.m.jd.com/property-information/download/property-information-7.1.0.tgz", {}, "sha1-tiLoZG4CtYAgVBVYa0CATT6L/V0="],
+
+    "proxy-from-env": ["proxy-from-env@1.1.0", "http://registry.m.jd.com/proxy-from-env/download/proxy-from-env-1.1.0.tgz", {}, "sha1-4QLxbKNVQkhldV0sno6k8k1Yw+I="],
+
+    "prr": ["prr@1.0.1", "http://registry.m.jd.com/prr/download/prr-1.0.1.tgz", {}, "sha1-0/wRS6BplaRexok/SEzrHXj19HY="],
+
+    "qrcode": ["qrcode@1.5.4", "http://registry.m.jd.com/qrcode/download/qrcode-1.5.4.tgz", { "dependencies": { "dijkstrajs": "^1.0.1", "pngjs": "^5.0.0", "yargs": "^15.3.1" }, "bin": { "qrcode": "bin/qrcode" } }, "sha1-XLgdhutXxnX+uwjPAH//ljQF2og="],
+
+    "react": ["react@18.3.1", "http://registry.m.jd.com/react/download/react-18.3.1.tgz", { "dependencies": { "loose-envify": "^1.1.0" } }, "sha1-SauJIAnFOTNiW9FrJTP8dUyrKJE="],
+
+    "react-dom": ["react-dom@18.3.1", "http://registry.m.jd.com/react-dom/download/react-dom-18.3.1.tgz", { "dependencies": { "loose-envify": "^1.1.0", "scheduler": "^0.23.2" }, "peerDependencies": { "react": "^18.3.1" } }, "sha1-wiZdeVEbV9R5s90/36UVNklMXLQ="],
+
+    "readdirp": ["readdirp@4.1.2", "http://registry.m.jd.com/readdirp/download/readdirp-4.1.2.tgz", {}, "sha1-64WAFDX78qfuWPGeCSGwaPxplI0="],
+
+    "regex": ["regex@6.0.1", "http://registry.m.jd.com/regex/download/regex-6.0.1.tgz", { "dependencies": { "regex-utilities": "^2.3.0" } }, "sha1-KC+kQ10McAsJwOsJgrYC4Fq2o08="],
+
+    "regex-recursion": ["regex-recursion@6.0.2", "http://registry.m.jd.com/regex-recursion/download/regex-recursion-6.0.2.tgz", { "dependencies": { "regex-utilities": "^2.3.0" } }, "sha1-oLGXenTIfwczd7k42+36supYKzM="],
+
+    "regex-utilities": ["regex-utilities@2.3.0", "http://registry.m.jd.com/regex-utilities/download/regex-utilities-2.3.0.tgz", {}, "sha1-hxY1EqFdzikIzweciWDVFY/0MoA="],
+
+    "require-directory": ["require-directory@2.1.1", "http://registry.m.jd.com/require-directory/download/require-directory-2.1.1.tgz", {}, "sha1-jGStX9MNqxyXbiNE/+f3kqam30I="],
+
+    "require-main-filename": ["require-main-filename@2.0.0", "http://registry.m.jd.com/require-main-filename/download/require-main-filename-2.0.0.tgz", {}, "sha1-0LMp7MfMD2Fkn2IhW+aa9UqomJs="],
+
+    "rfdc": ["rfdc@1.4.1", "http://registry.m.jd.com/rfdc/download/rfdc-1.4.1.tgz", {}, "sha1-d492xPtzHZNBTo+SX77PZMzn9so="],
+
+    "rollup": ["rollup@4.46.4", "http://registry.m.jd.com/rollup/download/rollup-4.46.4.tgz", { "dependencies": { "@types/estree": "1.0.8" }, "optionalDependencies": { "@rollup/rollup-android-arm-eabi": "4.46.4", "@rollup/rollup-android-arm64": "4.46.4", "@rollup/rollup-darwin-arm64": "4.46.4", "@rollup/rollup-darwin-x64": "4.46.4", "@rollup/rollup-freebsd-arm64": "4.46.4", "@rollup/rollup-freebsd-x64": "4.46.4", "@rollup/rollup-linux-arm-gnueabihf": "4.46.4", "@rollup/rollup-linux-arm-musleabihf": "4.46.4", "@rollup/rollup-linux-arm64-gnu": "4.46.4", "@rollup/rollup-linux-arm64-musl": "4.46.4", "@rollup/rollup-linux-loongarch64-gnu": "4.46.4", "@rollup/rollup-linux-ppc64-gnu": "4.46.4", "@rollup/rollup-linux-riscv64-gnu": "4.46.4", "@rollup/rollup-linux-riscv64-musl": "4.46.4", "@rollup/rollup-linux-s390x-gnu": "4.46.4", "@rollup/rollup-linux-x64-gnu": "4.46.4", "@rollup/rollup-linux-x64-musl": "4.46.4", "@rollup/rollup-win32-arm64-msvc": "4.46.4", "@rollup/rollup-win32-ia32-msvc": "4.46.4", "@rollup/rollup-win32-x64-msvc": "4.46.4", "fsevents": "~2.3.2" }, "bin": { "rollup": "dist/bin/rollup" } }, "sha1-x38SwCWuadWun+wEVhn+rmhEcpk="],
+
+    "rxjs": ["rxjs@7.8.2", "http://registry.m.jd.com/rxjs/download/rxjs-7.8.2.tgz", { "dependencies": { "tslib": "^2.1.0" } }, "sha1-lVvEc+2K8RoAKivlIHG/R1Y4YHs="],
+
+    "safer-buffer": ["safer-buffer@2.1.2", "http://registry.m.jd.com/safer-buffer/download/safer-buffer-2.1.2.tgz", {}, "sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo="],
+
+    "sass": ["sass@1.90.0", "http://registry.m.jd.com/sass/download/sass-1.90.0.tgz", { "dependencies": { "chokidar": "^4.0.0", "immutable": "^5.0.2", "source-map-js": ">=0.6.2 <2.0.0" }, "optionalDependencies": { "@parcel/watcher": "^2.4.1" }, "bin": { "sass": "sass.js" } }, "sha1-1vwr5Jx8CGzobqCyMaNb+eM8uEs="],
+
+    "sass-embedded": ["sass-embedded@1.89.2", "http://registry.m.jd.com/sass-embedded/download/sass-embedded-1.89.2.tgz", { "dependencies": { "@bufbuild/protobuf": "^2.5.0", "buffer-builder": "^0.2.0", "colorjs.io": "^0.5.0", "immutable": "^5.0.2", "rxjs": "^7.4.0", "supports-color": "^8.1.1", "sync-child-process": "^1.0.2", "varint": "^6.0.0" }, "optionalDependencies": { "sass-embedded-android-arm": "1.89.2", "sass-embedded-android-arm64": "1.89.2", "sass-embedded-android-riscv64": "1.89.2", "sass-embedded-android-x64": "1.89.2", "sass-embedded-darwin-arm64": "1.89.2", "sass-embedded-darwin-x64": "1.89.2", "sass-embedded-linux-arm": "1.89.2", "sass-embedded-linux-arm64": "1.89.2", "sass-embedded-linux-musl-arm": "1.89.2", "sass-embedded-linux-musl-arm64": "1.89.2", "sass-embedded-linux-musl-riscv64": "1.89.2", "sass-embedded-linux-musl-x64": "1.89.2", "sass-embedded-linux-riscv64": "1.89.2", "sass-embedded-linux-x64": "1.89.2", "sass-embedded-win32-arm64": "1.89.2", "sass-embedded-win32-x64": "1.89.2" }, "bin": { "sass": "dist/bin/sass.js" } }, "sha1-v2zX1qzgbwQwu/ORPJWovoM2eIM="],
+
+    "sass-embedded-darwin-arm64": ["sass-embedded-darwin-arm64@1.89.2", "http://registry.m.jd.com/sass-embedded-darwin-arm64/download/sass-embedded-darwin-arm64-1.89.2.tgz", {}, "sha1-VxULd2dtTYLoSyGY9faYNBj/8E4="],
+
+    "sass-embedded-darwin-x64": ["sass-embedded-darwin-x64@1.89.2", "http://registry.m.jd.com/sass-embedded-darwin-x64/download/sass-embedded-darwin-x64-1.89.2.tgz", {}, "sha1-sLHFq7HQV9qqj4oeKySXR4hloi0="],
+
+    "sass-embedded-linux-musl-x64": ["sass-embedded-linux-musl-x64@1.89.2", "http://registry.m.jd.com/sass-embedded-linux-musl-x64/download/sass-embedded-linux-musl-x64-1.89.2.tgz", {}, "sha1-L9RBWXqV9X1w0MRuDowYq09SxZY="],
+
+    "sass-embedded-linux-x64": ["sass-embedded-linux-x64@1.89.2", "http://registry.m.jd.com/sass-embedded-linux-x64/download/sass-embedded-linux-x64-1.89.2.tgz", {}, "sha1-mlgSejEufAEeOiBHD/Vwe5qnhTY="],
+
+    "sass-embedded-win32-x64": ["sass-embedded-win32-x64@1.89.2", "http://registry.m.jd.com/sass-embedded-win32-x64/download/sass-embedded-win32-x64-1.89.2.tgz", {}, "sha1-n1xxthGo7bxA4cjMR70g2KS98To="],
+
+    "sax": ["sax@1.4.1", "http://registry.m.jd.com/sax/download/sax-1.4.1.tgz", {}, "sha1-RMyJiDd/EmME07P8EBDHM7kp7w8="],
+
+    "scheduler": ["scheduler@0.23.2", "http://registry.m.jd.com/scheduler/download/scheduler-0.23.2.tgz", { "dependencies": { "loose-envify": "^1.1.0" } }, "sha1-QUumSjsoKJLpRM8hCOzAeNEVzcM="],
+
+    "search-insights": ["search-insights@2.17.3", "http://registry.m.jd.com/search-insights/download/search-insights-2.17.3.tgz", {}, "sha1-j66l0gUHvzSMq6ByTlOGhihHtmE="],
+
+    "semver": ["semver@5.7.2", "http://registry.m.jd.com/semver/download/semver-5.7.2.tgz", { "bin": { "semver": "bin/semver" } }, "sha1-SNVdtzfDKHzUg14X+hP+rOHEHvg="],
+
+    "set-blocking": ["set-blocking@2.0.0", "http://registry.m.jd.com/set-blocking/download/set-blocking-2.0.0.tgz", {}, "sha1-BF+XgtARrppoA93TgrJDkrPYkPc="],
+
+    "shebang-command": ["shebang-command@2.0.0", "http://registry.m.jd.com/shebang-command/download/shebang-command-2.0.0.tgz", { "dependencies": { "shebang-regex": "^3.0.0" } }, "sha1-zNCvT4g1+9wmW4JGGq8MNmY/NOo="],
+
+    "shebang-regex": ["shebang-regex@3.0.0", "http://registry.m.jd.com/shebang-regex/download/shebang-regex-3.0.0.tgz", {}, "sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI="],
+
+    "shiki": ["shiki@2.5.0", "http://registry.m.jd.com/shiki/download/shiki-2.5.0.tgz", { "dependencies": { "@shikijs/core": "2.5.0", "@shikijs/engine-javascript": "2.5.0", "@shikijs/engine-oniguruma": "2.5.0", "@shikijs/langs": "2.5.0", "@shikijs/themes": "2.5.0", "@shikijs/types": "2.5.0", "@shikijs/vscode-textmate": "^10.0.2", "@types/hast": "^3.0.4" } }, "sha1-CdAevzsLBlgEMc493AIzIEQs8iM="],
+
+    "signal-exit": ["signal-exit@4.1.0", "http://registry.m.jd.com/signal-exit/download/signal-exit-4.1.0.tgz", {}, "sha1-lSGIwcvVRgcOLdIND0HArgUwywQ="],
+
+    "slick": ["slick@1.12.2", "http://registry.m.jd.com/slick/download/slick-1.12.2.tgz", {}, "sha1-vQSN23TefRymkV+qSldXCzVQwtc="],
+
+    "sortablejs": ["sortablejs@1.15.6", "http://registry.m.jd.com/sortablejs/download/sortablejs-1.15.6.tgz", {}, "sha1-/5NplJP1uKuNgo+TMie0mI3x05M="],
+
+    "source-map": ["source-map@0.6.1", "http://registry.m.jd.com/source-map/download/source-map-0.6.1.tgz", {}, "sha1-dHIq8y6WFOnCh6jQu95IteLxomM="],
+
+    "source-map-js": ["source-map-js@1.2.1", "http://registry.m.jd.com/source-map-js/download/source-map-js-1.2.1.tgz", {}, "sha1-HOVlD93YerwJnto33P8CTCZnrkY="],
+
+    "source-map-support": ["source-map-support@0.5.21", "http://registry.m.jd.com/source-map-support/download/source-map-support-0.5.21.tgz", { "dependencies": { "buffer-from": "^1.0.0", "source-map": "^0.6.0" } }, "sha1-BP58f54e0tZiIzwoyys1ufY/bk8="],
+
+    "space-separated-tokens": ["space-separated-tokens@2.0.2", "http://registry.m.jd.com/space-separated-tokens/download/space-separated-tokens-2.0.2.tgz", {}, "sha1-Hs2dI1CjhEVyw/SjErzrAYNIhZ8="],
+
+    "speakingurl": ["speakingurl@14.0.1", "http://registry.m.jd.com/speakingurl/download/speakingurl-14.0.1.tgz", {}, "sha1-837I3cSrmOlgDByewySoxI13KlM="],
+
+    "speech-rule-engine": ["speech-rule-engine@4.1.2", "http://registry.m.jd.com/speech-rule-engine/download/speech-rule-engine-4.1.2.tgz", { "dependencies": { "@xmldom/xmldom": "0.9.8", "commander": "13.1.0", "wicked-good-xpath": "1.3.0" }, "bin": { "sre": "bin/sre" } }, "sha1-OzG1gTovwurs39omrSnDJZnppTc="],
+
+    "string-width": ["string-width@4.2.3", "http://registry.m.jd.com/string-width/download/string-width-4.2.3.tgz", { "dependencies": { "emoji-regex": "^8.0.0", "is-fullwidth-code-point": "^3.0.0", "strip-ansi": "^6.0.1" } }, "sha1-JpxxF9J7Ba0uU2gwqOyJXvnG0BA="],
+
+    "string-width-cjs": ["string-width@4.2.3", "http://registry.m.jd.com/string-width/download/string-width-4.2.3.tgz", { "dependencies": { "emoji-regex": "^8.0.0", "is-fullwidth-code-point": "^3.0.0", "strip-ansi": "^6.0.1" } }, "sha1-JpxxF9J7Ba0uU2gwqOyJXvnG0BA="],
+
+    "stringify-entities": ["stringify-entities@4.0.4", "http://registry.m.jd.com/stringify-entities/download/stringify-entities-4.0.4.tgz", { "dependencies": { "character-entities-html4": "^2.0.0", "character-entities-legacy": "^3.0.0" } }, "sha1-s7ee9fJ3zErHPK6wI2xbqTmzpPM="],
+
+    "strip-ansi": ["strip-ansi@6.0.1", "http://registry.m.jd.com/strip-ansi/download/strip-ansi-6.0.1.tgz", { "dependencies": { "ansi-regex": "^5.0.1" } }, "sha1-nibGPTD1NEPpSJSVshBdN7Z6hdk="],
+
+    "strip-ansi-cjs": ["strip-ansi@6.0.1", "http://registry.m.jd.com/strip-ansi/download/strip-ansi-6.0.1.tgz", { "dependencies": { "ansi-regex": "^5.0.1" } }, "sha1-nibGPTD1NEPpSJSVshBdN7Z6hdk="],
+
+    "stylus": ["stylus@0.64.0", "http://registry.m.jd.com/stylus/download/stylus-0.64.0.tgz", { "dependencies": { "@adobe/css-tools": "~4.3.3", "debug": "^4.3.2", "glob": "^10.4.5", "sax": "~1.4.1", "source-map": "^0.7.3" }, "bin": { "stylus": "bin/stylus" } }, "sha1-r5klPxJUyFFSjETt3DzPH4MZQvE="],
+
+    "sugarss": ["sugarss@5.0.0", "http://registry.m.jd.com/sugarss/download/sugarss-5.0.0.tgz", { "peerDependencies": { "postcss": "^8.3.3" } }, "sha1-qX3cG1oVmLooOhC41z2lajhI/jY="],
+
+    "superjson": ["superjson@2.2.2", "http://registry.m.jd.com/superjson/download/superjson-2.2.2.tgz", { "dependencies": { "copy-anything": "^3.0.2" } }, "sha1-nVK/C/a1dRo8NHLxKS5xR4K6MXM="],
+
+    "supports-color": ["supports-color@8.1.1", "http://registry.m.jd.com/supports-color/download/supports-color-8.1.1.tgz", { "dependencies": { "has-flag": "^4.0.0" } }, "sha1-zW/BfihQDP9WwbhsCn/UpUpzAFw="],
+
+    "sync-child-process": ["sync-child-process@1.0.2", "http://registry.m.jd.com/sync-child-process/download/sync-child-process-1.0.2.tgz", { "dependencies": { "sync-message-port": "^1.0.0" } }, "sha1-RefHLnVtEkPoC1R+ouF5V6ueNn8="],
+
+    "sync-message-port": ["sync-message-port@1.1.3", "http://registry.m.jd.com/sync-message-port/download/sync-message-port-1.1.3.tgz", {}, "sha1-YFXFZe6MgdL57lqufbdX5tkIjAw="],
+
+    "tabbable": ["tabbable@6.2.0", "http://registry.m.jd.com/tabbable/download/tabbable-6.2.0.tgz", {}, "sha1-cy+2K8AXXPzsJXMwvhh9z7ofO5c="],
+
+    "terser": ["terser@5.43.1", "http://registry.m.jd.com/terser/download/terser-5.43.1.tgz", { "dependencies": { "@jridgewell/source-map": "^0.3.3", "acorn": "^8.14.0", "commander": "^2.20.0", "source-map-support": "~0.5.20" }, "bin": { "terser": "bin/terser" } }, "sha1-iDh/T5eU/xop561h+yky4ltP220="],
+
+    "to-regex-range": ["to-regex-range@5.0.1", "http://registry.m.jd.com/to-regex-range/download/to-regex-range-5.0.1.tgz", { "dependencies": { "is-number": "^7.0.0" } }, "sha1-FkjESq58jZiKMmAY7XL1tN0DkuQ="],
+
+    "tr46": ["tr46@0.0.3", "http://registry.m.jd.com/tr46/download/tr46-0.0.3.tgz", {}, "sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o="],
+
+    "trim-lines": ["trim-lines@3.0.1", "http://registry.m.jd.com/trim-lines/download/trim-lines-3.0.1.tgz", {}, "sha1-2ALjMqB9+GHEiALAQyEBexvYczg="],
+
+    "tslib": ["tslib@2.8.1", "http://registry.m.jd.com/tslib/download/tslib-2.8.1.tgz", {}, "sha1-YS7+TtI11Wfoq6Xypfq3AoCt6D8="],
 
     "typescript": ["typescript@5.9.2", "http://registry.m.jd.com/typescript/download/typescript-5.9.2.tgz", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha1-2TRQzd7FFUotXKvjuBArgzFvsqY="],
 
     "undici-types": ["undici-types@7.10.0", "http://registry.m.jd.com/undici-types/download/undici-types-7.10.0.tgz", {}, "sha1-SsLgWM5WtGKwVuYpzGoCOT0/81A="],
+
+    "unist-util-is": ["unist-util-is@6.0.0", "http://registry.m.jd.com/unist-util-is/download/unist-util-is-6.0.0.tgz", { "dependencies": { "@types/unist": "^3.0.0" } }, "sha1-t3WVZIav8Qep3tlx2ZbBczdL5CQ="],
+
+    "unist-util-position": ["unist-util-position@5.0.0", "http://registry.m.jd.com/unist-util-position/download/unist-util-position-5.0.0.tgz", { "dependencies": { "@types/unist": "^3.0.0" } }, "sha1-Z48gq1yhIHqX1+qKOINzyc+Ja+Q="],
+
+    "unist-util-stringify-position": ["unist-util-stringify-position@4.0.0", "http://registry.m.jd.com/unist-util-stringify-position/download/unist-util-stringify-position-4.0.0.tgz", { "dependencies": { "@types/unist": "^3.0.0" } }, "sha1-RJxuIaiA4IVb9aq63rOnQDFKusI="],
+
+    "unist-util-visit": ["unist-util-visit@5.0.0", "http://registry.m.jd.com/unist-util-visit/download/unist-util-visit-5.0.0.tgz", { "dependencies": { "@types/unist": "^3.0.0", "unist-util-is": "^6.0.0", "unist-util-visit-parents": "^6.0.0" } }, "sha1-p94fMfcv/TUZ6nGBTMz1/WqSF9Y="],
+
+    "unist-util-visit-parents": ["unist-util-visit-parents@6.0.1", "http://registry.m.jd.com/unist-util-visit-parents/download/unist-util-visit-parents-6.0.1.tgz", { "dependencies": { "@types/unist": "^3.0.0", "unist-util-is": "^6.0.0" } }, "sha1-TV+FdVw7jw3GniHspdbYLSIWKBU="],
+
+    "universal-cookie": ["universal-cookie@7.2.2", "http://registry.m.jd.com/universal-cookie/download/universal-cookie-7.2.2.tgz", { "dependencies": { "@types/cookie": "^0.6.0", "cookie": "^0.7.2" } }, "sha1-k66exVuquJskMARzVDFwu4ESdzw="],
+
+    "valid-data-url": ["valid-data-url@3.0.1", "http://registry.m.jd.com/valid-data-url/download/valid-data-url-3.0.1.tgz", {}, "sha1-gmwXROcbVjLoR90V29Rbn7OKo08="],
+
+    "varint": ["varint@6.0.0", "http://registry.m.jd.com/varint/download/varint-6.0.0.tgz", {}, "sha1-mIHrDOj+rqZRJDnRnd+Ev1UWYdA="],
+
+    "vfile": ["vfile@6.0.3", "http://registry.m.jd.com/vfile/download/vfile-6.0.3.tgz", { "dependencies": { "@types/unist": "^3.0.0", "vfile-message": "^4.0.0" } }, "sha1-NlKrHEllMYUr9VprrFevmB68OKs="],
+
+    "vfile-message": ["vfile-message@4.0.3", "http://registry.m.jd.com/vfile-message/download/vfile-message-4.0.3.tgz", { "dependencies": { "@types/unist": "^3.0.0", "unist-util-stringify-position": "^4.0.0" } }, "sha1-h7RN3de3DwZBwuPtCGS6c+LqjfQ="],
+
+    "vite": ["vite@5.4.19", "http://registry.m.jd.com/vite/download/vite-5.4.19.tgz", { "dependencies": { "esbuild": "^0.21.3", "postcss": "^8.4.43", "rollup": "^4.20.0" }, "optionalDependencies": { "fsevents": "~2.3.3" }, "peerDependencies": { "@types/node": "^18.0.0 || >=20.0.0", "less": "*", "lightningcss": "^1.21.0", "sass": "*", "sass-embedded": "*", "stylus": "*", "sugarss": "*", "terser": "^5.4.0" }, "bin": { "vite": "bin/vite.js" } }, "sha1-IO/QYEEARLPtVVBJQYpefRmY+Vk="],
+
+    "vitepress": ["vitepress@1.6.4", "http://registry.m.jd.com/vitepress/download/vitepress-1.6.4.tgz", { "dependencies": { "@docsearch/css": "3.8.2", "@docsearch/js": "3.8.2", "@iconify-json/simple-icons": "^1.2.21", "@shikijs/core": "^2.1.0", "@shikijs/transformers": "^2.1.0", "@shikijs/types": "^2.1.0", "@types/markdown-it": "^14.1.2", "@vitejs/plugin-vue": "^5.2.1", "@vue/devtools-api": "^7.7.0", "@vue/shared": "^3.5.13", "@vueuse/core": "^12.4.0", "@vueuse/integrations": "^12.4.0", "focus-trap": "^7.6.4", "mark.js": "8.11.1", "minisearch": "^7.1.1", "shiki": "^2.1.0", "vite": "^5.4.14", "vue": "^3.5.13" }, "peerDependencies": { "markdown-it-mathjax3": "^4", "postcss": "^8" }, "bin": { "vitepress": "bin/vitepress.js" } }, "sha1-G2xo/t5UGj9AGmYmPc4MmF4tjZI="],
+
+    "vue": ["vue@3.5.19", "http://registry.m.jd.com/vue/download/vue-3.5.19.tgz", { "dependencies": { "@vue/compiler-dom": "3.5.19", "@vue/compiler-sfc": "3.5.19", "@vue/runtime-dom": "3.5.19", "@vue/server-renderer": "3.5.19", "@vue/shared": "3.5.19" }, "peerDependencies": { "typescript": "*" } }, "sha1-lzumQ6MxvTVXjuwqJ/oRX1AOsls="],
+
+    "web-resource-inliner": ["web-resource-inliner@6.0.1", "http://registry.m.jd.com/web-resource-inliner/download/web-resource-inliner-6.0.1.tgz", { "dependencies": { "ansi-colors": "^4.1.1", "escape-goat": "^3.0.0", "htmlparser2": "^5.0.0", "mime": "^2.4.6", "node-fetch": "^2.6.0", "valid-data-url": "^3.0.0" } }, "sha1-3wgi8KEgKIBf6AcZ7VKrZSaIbgI="],
+
+    "webidl-conversions": ["webidl-conversions@3.0.1", "http://registry.m.jd.com/webidl-conversions/download/webidl-conversions-3.0.1.tgz", {}, "sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE="],
+
+    "whatwg-url": ["whatwg-url@5.0.0", "http://registry.m.jd.com/whatwg-url/download/whatwg-url-5.0.0.tgz", { "dependencies": { "tr46": "~0.0.3", "webidl-conversions": "^3.0.0" } }, "sha1-lmRU6HZUYuN2RNNib2dCzotwll0="],
+
+    "which": ["which@2.0.2", "http://registry.m.jd.com/which/download/which-2.0.2.tgz", { "dependencies": { "isexe": "^2.0.0" }, "bin": { "node-which": "./bin/node-which" } }, "sha1-fGqN0KY2oDJ+ELWckobu6T8/UbE="],
+
+    "which-module": ["which-module@2.0.1", "http://registry.m.jd.com/which-module/download/which-module-2.0.1.tgz", {}, "sha1-d2sf412Qrr6Z6KwV6yQJM4mkpAk="],
+
+    "wicked-good-xpath": ["wicked-good-xpath@1.3.0", "http://registry.m.jd.com/wicked-good-xpath/download/wicked-good-xpath-1.3.0.tgz", {}, "sha1-gbDpXoZQ5JyUsiKY//hoa1VTz2w="],
+
+    "wrap-ansi": ["wrap-ansi@6.2.0", "http://registry.m.jd.com/wrap-ansi/download/wrap-ansi-6.2.0.tgz", { "dependencies": { "ansi-styles": "^4.0.0", "string-width": "^4.1.0", "strip-ansi": "^6.0.0" } }, "sha1-6Tk7oHEC5skaOyIUePAlfNKFblM="],
+
+    "wrap-ansi-cjs": ["wrap-ansi@7.0.0", "http://registry.m.jd.com/wrap-ansi/download/wrap-ansi-7.0.0.tgz", { "dependencies": { "ansi-styles": "^4.0.0", "string-width": "^4.1.0", "strip-ansi": "^6.0.0" } }, "sha1-Z+FFz/UQpqaYS98RUpEdadLrnkM="],
+
+    "y18n": ["y18n@4.0.3", "http://registry.m.jd.com/y18n/download/y18n-4.0.3.tgz", {}, "sha1-tfJZyCzW4zaSHv17/Yv1YN6e7t8="],
+
+    "yargs": ["yargs@15.4.1", "http://registry.m.jd.com/yargs/download/yargs-15.4.1.tgz", { "dependencies": { "cliui": "^6.0.0", "decamelize": "^1.2.0", "find-up": "^4.1.0", "get-caller-file": "^2.0.1", "require-directory": "^2.1.1", "require-main-filename": "^2.0.0", "set-blocking": "^2.0.0", "string-width": "^4.2.0", "which-module": "^2.0.0", "y18n": "^4.0.0", "yargs-parser": "^18.1.2" } }, "sha1-DYehbeAa7p2L7Cv7909nhRcw9Pg="],
+
+    "yargs-parser": ["yargs-parser@18.1.3", "http://registry.m.jd.com/yargs-parser/download/yargs-parser-18.1.3.tgz", { "dependencies": { "camelcase": "^5.0.0", "decamelize": "^1.2.0" } }, "sha1-vmjEl1xrKr9GkjawyHA2L6sJp7A="],
+
+    "zwitch": ["zwitch@2.0.4", "http://registry.m.jd.com/zwitch/download/zwitch-2.0.4.tgz", {}, "sha1-yCfUsKy3b8PmhaTG7CkC1RBw6dc="],
+
+    "@isaacs/cliui/string-width": ["string-width@5.1.2", "http://registry.m.jd.com/string-width/download/string-width-5.1.2.tgz", { "dependencies": { "eastasianwidth": "^0.2.0", "emoji-regex": "^9.2.2", "strip-ansi": "^7.0.1" } }, "sha1-FPja7G2B5yIdKjV+Zoyrc728p5Q="],
+
+    "@isaacs/cliui/strip-ansi": ["strip-ansi@7.1.0", "http://registry.m.jd.com/strip-ansi/download/strip-ansi-7.1.0.tgz", { "dependencies": { "ansi-regex": "^6.0.1" } }, "sha1-1bZWjKaJ2FYTcLBwdoXSJDT6/0U="],
+
+    "@isaacs/cliui/wrap-ansi": ["wrap-ansi@8.1.0", "http://registry.m.jd.com/wrap-ansi/download/wrap-ansi-8.1.0.tgz", { "dependencies": { "ansi-styles": "^6.1.0", "string-width": "^5.0.1", "strip-ansi": "^7.0.1" } }, "sha1-VtwiNo7lcPrOG0mBmXXZuaXq0hQ="],
+
+    "@parcel/watcher/detect-libc": ["detect-libc@1.0.3", "http://registry.m.jd.com/detect-libc/download/detect-libc-1.0.3.tgz", { "bin": { "detect-libc": "./bin/detect-libc.js" } }, "sha1-+hN8S9aY7fVc1c0CrFWfkaTEups="],
+
+    "dom-serializer/entities": ["entities@2.2.0", "http://registry.m.jd.com/entities/download/entities-2.2.0.tgz", {}, "sha1-CY3JDruD2N/6CJ1VJWs1HTTE2lU="],
+
+    "htmlparser2/entities": ["entities@2.2.0", "http://registry.m.jd.com/entities/download/entities-2.2.0.tgz", {}, "sha1-CY3JDruD2N/6CJ1VJWs1HTTE2lU="],
+
+    "juice/commander": ["commander@6.2.1", "http://registry.m.jd.com/commander/download/commander-6.2.1.tgz", {}, "sha1-B5LraC37wyWZm7K4T93duhEKxzw="],
+
+    "speech-rule-engine/commander": ["commander@13.1.0", "http://registry.m.jd.com/commander/download/commander-13.1.0.tgz", {}, "sha1-d2Fn22jHjzjczh+bjXuLmkiKv0Y="],
+
+    "stylus/source-map": ["source-map@0.7.6", "http://registry.m.jd.com/source-map/download/source-map-0.7.6.tgz", {}, "sha1-o2WKuH5bZCnIofO6AIPUxhyj7wI="],
+
+    "superjson/copy-anything": ["copy-anything@3.0.5", "http://registry.m.jd.com/copy-anything/download/copy-anything-3.0.5.tgz", { "dependencies": { "is-what": "^4.1.8" } }, "sha1-LZLc6MSY95D6etFrAaGuWkWwIKA="],
+
+    "web-resource-inliner/htmlparser2": ["htmlparser2@5.0.1", "http://registry.m.jd.com/htmlparser2/download/htmlparser2-5.0.1.tgz", { "dependencies": { "domelementtype": "^2.0.1", "domhandler": "^3.3.0", "domutils": "^2.4.2", "entities": "^2.0.0" } }, "sha1-fapvw+NdYQeslaT8CHgfCRZk9uc="],
+
+    "web-resource-inliner/mime": ["mime@2.6.0", "http://registry.m.jd.com/mime/download/mime-2.6.0.tgz", { "bin": { "mime": "cli.js" } }, "sha1-oqaCqVzU0MsdYlfij4PafjWAA2c="],
+
+    "@isaacs/cliui/string-width/emoji-regex": ["emoji-regex@9.2.2", "http://registry.m.jd.com/emoji-regex/download/emoji-regex-9.2.2.tgz", {}, "sha1-hAyIA7DYBH9P8M+WMXazLU7z7XI="],
+
+    "@isaacs/cliui/strip-ansi/ansi-regex": ["ansi-regex@6.2.0", "http://registry.m.jd.com/ansi-regex/download/ansi-regex-6.2.0.tgz", {}, "sha1-LzAudVBDGxt3YnBf/7Us8f+iBEc="],
+
+    "@isaacs/cliui/wrap-ansi/ansi-styles": ["ansi-styles@6.2.1", "http://registry.m.jd.com/ansi-styles/download/ansi-styles-6.2.1.tgz", {}, "sha1-DmIyDPmcIa//OzASGSVGqsv7BcU="],
+
+    "superjson/copy-anything/is-what": ["is-what@4.1.16", "http://registry.m.jd.com/is-what/download/is-what-4.1.16.tgz", {}, "sha1-GthgoZ2otIla1Uldoxgs4qzdem8="],
+
+    "web-resource-inliner/htmlparser2/domhandler": ["domhandler@3.3.0", "http://registry.m.jd.com/domhandler/download/domhandler-3.3.0.tgz", { "dependencies": { "domelementtype": "^2.0.1" } }, "sha1-bbfqRuRhfrFc+HXfaLK4UkzgA3o="],
+
+    "web-resource-inliner/htmlparser2/entities": ["entities@2.2.0", "http://registry.m.jd.com/entities/download/entities-2.2.0.tgz", {}, "sha1-CY3JDruD2N/6CJ1VJWs1HTTE2lU="],
   }
 }
