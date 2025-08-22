@@ -64,7 +64,7 @@ const tasks = _files.map((file) => {
 })
 ```
 
-修改为在previewType为picture且file.type不是image的情况下才跳过setFileList
+直接删除，过滤预览类型的逻辑不应由底层承担
 
 ```ts
 const tasks = _files.map((file) => {
@@ -79,10 +79,6 @@ const tasks = _files.map((file) => {
         type: file.type,
     }
     if (preview) {
-        // 如果是图片类型的预览且上传的文件非图片则不放入文件列表中
-        if (previewType === 'picture' && !file.type?.includes('image')) {
-            return info
-        }
         const reader = new FileReader()
         reader.onload = (event: ProgressEvent<FileReader>) => {
             fileListRef.current = [
