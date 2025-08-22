@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: '/nutui-all-in-one/',
   title: "NutUI React Docs",
   themeConfig: {
     sidebar: [
